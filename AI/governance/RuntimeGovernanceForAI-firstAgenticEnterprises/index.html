@@ -1,9 +1,10 @@
-<!DOCTYPE html><html lang="en"><head>
-    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Runtime Governance for AI-First Agentic Enterprises</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Runtime Governance for AI-First Agentic Enterprises</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
         tailwind.config = {
             theme: {
                 extend: {
@@ -22,10 +23,10 @@
             }
         }
     </script>
-    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
-    <script src="https://cdn.jsdelivr.net/npm/mermaid@10.6.1/dist/mermaid.min.js"></script>
-    <style>
+<link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@10.6.1/dist/mermaid.min.js"></script>
+<style>
         .mermaid-container {
             display: flex;
             justify-content: center;
@@ -215,945 +216,897 @@
             font-size: 15px !important;
         }
     </style>
-  <base target="_blank">
+<base target="_blank"/>
 </head>
-
-  <body class="bg-background font-sans text-primary leading-relaxed overflow-x-hidden">
-    <!-- Toggle button for mobile -->
-    <button id="toc-toggle" class="fixed top-4 left-4 z-50 p-2 bg-white rounded shadow-md md:hidden">
-      <i class="fas fa-bars"></i>
-    </button>
-
-    <!-- Fixed Table of Contents -->
-    <nav id="toc-nav" class="fixed left-0 top-0 h-screen w-80 bg-white shadow-xl z-40 overflow-y-auto border-r border-gray-200 transform -translate-x-full md:translate-x-0 transition-transform duration-300">
-      <div class="p-6">
-        <button id="toc-close" class="absolute top-4 right-4 p-2 text-gray-500 md:hidden">
-          <i class="fas fa-times"></i>
-        </button>
-        <h3 class="font-serif font-semibold text-lg mb-4 text-primary">Table of Contents</h3>
-        <ul class="space-y-2 text-sm">
-          <li>
-            <a href="#executive-summary" class="block py-2 px-3 rounded hover:bg-gray-100 transition-colors">Executive Summary</a>
-          </li>
-          <li>
-            <a href="#direct-match" class="block py-2 px-3 rounded hover:bg-gray-100 transition-colors">Direct Match: AGT</a>
-          </li>
-          <li>
-            <a href="#complementary-layer" class="block py-2 px-3 rounded hover:bg-gray-100 transition-colors">Complementary Layer</a>
-          </li>
-          <li>
-            <a href="#partial-matches" class="block py-2 px-3 rounded hover:bg-gray-100 transition-colors">Partial Matches</a>
-          </li>
-          <li>
-            <a href="#adjacent-tools" class="block py-2 px-3 rounded hover:bg-gray-100 transition-colors">Adjacent Tools</a>
-          </li>
-          <li>
-            <a href="#healthcare-track" class="block py-2 px-3 rounded hover:bg-gray-100 transition-colors">Healthcare Track</a>
-          </li>
-          <li>
-            <a href="#enterprise-track" class="block py-2 px-3 rounded hover:bg-gray-100 transition-colors">Enterprise Track</a>
-          </li>
-          <li>
-            <a href="#comparative-analysis" class="block py-2 px-3 rounded hover:bg-gray-100 transition-colors">Comparative Analysis</a>
-          </li>
-          <li>
-            <a href="#gap-analysis" class="block py-2 px-3 rounded hover:bg-gray-100 transition-colors">Gap Analysis</a>
-          </li>
-          <li>
-            <a href="#recommendations" class="block py-2 px-3 rounded hover:bg-gray-100 transition-colors">Recommendations</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
-
-    <!-- Main Content -->
-    <div class="ml-0 md:ml-80">
-      <!-- Hero Section -->
-      <header class="bg-gradient-to-br from-slate-50 to-blue-50 py-16 px-8">
-        <div class="max-w-6xl mx-auto">
-          <div class="flex flex-col lg:grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h1 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-primary mb-6 italic leading-tight">
+<body class="bg-background font-sans text-primary leading-relaxed overflow-x-hidden">
+<!-- Toggle button for mobile -->
+<button class="fixed top-4 left-4 z-50 p-2 bg-white rounded shadow-md md:hidden" id="toc-toggle">
+<i class="fas fa-bars"></i>
+</button>
+<!-- Fixed Table of Contents -->
+<nav class="fixed left-0 top-0 h-screen w-80 bg-white shadow-xl z-40 overflow-y-auto border-r border-gray-200 transform -translate-x-full md:translate-x-0 transition-transform duration-300" id="toc-nav">
+<div class="p-6">
+<button class="absolute top-4 right-4 p-2 text-gray-500 md:hidden" id="toc-close">
+<i class="fas fa-times"></i>
+</button>
+<h3 class="font-serif font-semibold text-lg mb-4 text-primary">Table of Contents</h3>
+<ul class="space-y-2 text-sm">
+<li>
+<a class="block py-2 px-3 rounded hover:bg-gray-100 transition-colors" href="#executive-summary">Executive Summary</a>
+</li>
+<li>
+<a class="block py-2 px-3 rounded hover:bg-gray-100 transition-colors" href="#direct-match">Direct Match: AGT</a>
+</li>
+<li>
+<a class="block py-2 px-3 rounded hover:bg-gray-100 transition-colors" href="#complementary-layer">Complementary Layer</a>
+</li>
+<li>
+<a class="block py-2 px-3 rounded hover:bg-gray-100 transition-colors" href="#partial-matches">Partial Matches</a>
+</li>
+<li>
+<a class="block py-2 px-3 rounded hover:bg-gray-100 transition-colors" href="#adjacent-tools">Adjacent Tools</a>
+</li>
+<li>
+<a class="block py-2 px-3 rounded hover:bg-gray-100 transition-colors" href="#healthcare-track">Healthcare Track</a>
+</li>
+<li>
+<a class="block py-2 px-3 rounded hover:bg-gray-100 transition-colors" href="#enterprise-track">Enterprise Track</a>
+</li>
+<li>
+<a class="block py-2 px-3 rounded hover:bg-gray-100 transition-colors" href="#comparative-analysis">Comparative Analysis</a>
+</li>
+<li>
+<a class="block py-2 px-3 rounded hover:bg-gray-100 transition-colors" href="#gap-analysis">Gap Analysis</a>
+</li>
+<li>
+<a class="block py-2 px-3 rounded hover:bg-gray-100 transition-colors" href="#recommendations">Recommendations</a>
+</li>
+</ul>
+</div>
+</nav>
+<!-- Main Content -->
+<div class="ml-0 md:ml-80">
+<!-- Hero Section -->
+<header class="bg-gradient-to-br from-slate-50 to-blue-50 py-16 px-8">
+<div class="max-w-6xl mx-auto">
+<div class="flex flex-col lg:grid lg:grid-cols-2 gap-12 items-center">
+<div>
+<h1 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-primary mb-6 italic leading-tight">
                 Runtime Governance for AI-First Agentic Enterprises
               </h1>
-              <p class="text-base sm:text-lg text-secondary mb-8 leading-relaxed">
+<p class="text-base sm:text-lg text-secondary mb-8 leading-relaxed">
                 A comprehensive analysis of open-source governance layers for autonomous AI agents across healthcare and enterprise deployments
               </p>
-              <div class="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-muted">
-                <span><i class="far fa-calendar mr-2"></i>April 2026</span>
-                <span><i class="far fa-clock mr-2"></i>Research Findings</span>
-                <span><i class="fas fa-shield-alt mr-2"></i>Security Analysis</span>
-              </div>
-            </div>
-            <div class="mt-8 md:mt-0">
-              <img src="https://kimi-web-img.moonshot.cn/img/miro.medium.com/b6c4adea05d162163500b0e4c433f72794cc3d94.png" alt="Abstract visualization of AI agent governance layer" class="rounded-lg shadow-lg w-full h-auto" size="medium" aspect="wide" query="AI governance layer abstract" referrerpolicy="no-referrer" data-modified="1" data-score="0.00"/>
-            </div>
-          </div>
-        </div>
-      </header>
-
-      <!-- Executive Summary -->
-      <section id="executive-summary" class="py-16 px-8 bg-white">
-        <div class="max-w-6xl mx-auto">
-          <h2 class="font-serif text-3xl font-bold mb-8 text-primary">Executive Summary</h2>
-
-          <div class="bg-blue-50 border-l-4 border-accent p-6 mb-8">
-            <h3 class="font-semibold text-lg mb-3">TL;DR</h3>
-            <p class="text-secondary leading-relaxed">
+<div class="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-muted">
+<span><i class="far fa-calendar mr-2"></i>April 2026</span>
+<span><i class="far fa-clock mr-2"></i>Research Findings</span>
+<span><i class="fas fa-shield-alt mr-2"></i>Security Analysis</span>
+</div>
+</div>
+<div class="mt-8 md:mt-0">
+<img alt="Abstract visualization of AI agent governance layer" aspect="wide" class="rounded-lg shadow-lg w-full h-auto" data-modified="1" data-score="0.00" query="AI governance layer abstract" referrerpolicy="no-referrer" size="medium" src="img/microsoft agent governance toolkit.svg"/>
+</div>
+</div>
+</div>
+</header>
+<!-- Executive Summary -->
+<section class="py-16 px-8 bg-white" id="executive-summary">
+<div class="max-w-6xl mx-auto">
+<h2 class="font-serif text-3xl font-bold mb-8 text-primary">Executive Summary</h2>
+<div class="bg-blue-50 border-l-4 border-accent p-6 mb-8">
+<h3 class="font-semibold text-lg mb-3">TL;DR</h3>
+<p class="text-secondary leading-relaxed">
               A true runtime governance layer for AI-first agentic enterprises now exists: the <strong>Microsoft Agent Governance Toolkit (AGT)</strong>, released April 2026. It is the only open-source project providing deterministic, sub-millisecond policy enforcement across all critical governance functions. However, the ecosystem remains partially fragmented—AGT requires complementary layers like <strong>NVIDIA OpenShell</strong> for complete coverage, and <strong>no healthcare-native runtime governance layer</strong> currently exists. Organizations must adapt general-purpose tools for clinical deployments.
             </p>
-          </div>
-
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-            <div class="bg-gray-50 p-6 rounded-lg">
-              <h4 class="font-semibold mb-3 text-accent">Core Finding</h4>
-              <p class="text-sm text-secondary">Microsoft AGT represents a fundamental architectural breakthrough—the first comprehensive implementation that intercepts, evaluates, and governs every agent action before execution with deterministic, sub-millisecond policy enforcement.</p>
-            </div>
-            <div class="bg-gray-50 p-6 rounded-lg">
-              <h4 class="font-semibold mb-3 text-accent">Critical Qualification</h4>
-              <p class="text-sm text-secondary">Most significantly, no healthcare-native runtime governance layer exists. Organizations deploying clinical AI agents must adapt general-purpose tools with associated implementation burden and regulatory uncertainty.</p>
-            </div>
-          </div>
-
-          <div class="prose max-w-none">
-            <p class="text-secondary leading-relaxed mb-4">
-              Prior to AGT&#39;s emergence, organizations faced an unacceptable binary choice: deploy autonomous agents without adequate runtime controls, or constrain agent capabilities so severely that autonomy became illusory. The ecosystem was genuinely fragmented across orchestration frameworks (LangChain, AutoGen, CrewAI), security tools (NVIDIA OpenShell, AccuKnox), observability platforms (LangSmith, AgentOps), and compliance documentation systems—none providing unified runtime policy enforcement with cryptographic audit guarantees and regulatory framework mapping.
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+<div class="bg-gray-50 p-6 rounded-lg">
+<h4 class="font-semibold mb-3 text-accent">Core Finding</h4>
+<p class="text-sm text-secondary">Microsoft AGT represents a fundamental architectural breakthrough—the first comprehensive implementation that intercepts, evaluates, and governs every agent action before execution with deterministic, sub-millisecond policy enforcement.</p>
+</div>
+<div class="bg-gray-50 p-6 rounded-lg">
+<h4 class="font-semibold mb-3 text-accent">Critical Qualification</h4>
+<p class="text-sm text-secondary">Most significantly, no healthcare-native runtime governance layer exists. Organizations deploying clinical AI agents must adapt general-purpose tools with associated implementation burden and regulatory uncertainty.</p>
+</div>
+</div>
+<div class="prose max-w-none">
+<p class="text-secondary leading-relaxed mb-4">
+              Prior to AGT's emergence, organizations faced an unacceptable binary choice: deploy autonomous agents without adequate runtime controls, or constrain agent capabilities so severely that autonomy became illusory. The ecosystem was genuinely fragmented across orchestration frameworks (LangChain, AutoGen, CrewAI), security tools (NVIDIA OpenShell, AccuKnox), observability platforms (LangSmith, AgentOps), and compliance documentation systems—none providing unified runtime policy enforcement with cryptographic audit guarantees and regulatory framework mapping.
             </p>
-            <p class="text-secondary leading-relaxed">
-              AGT&#39;s significance extends beyond technical capability to strategic positioning. Microsoft explicitly designed AGT for vendor neutrality, with documented integrations for AWS Bedrock, Google ADK, Azure AI, LangChain, CrewAI, AutoGen, OpenAI Agents SDK, LlamaIndex, and &#34;more&#34;—a deliberate architectural choice to establish industry standard rather than proprietary advantage. The toolkit&#39;s aspiration for foundation governance signals long-term commitment to ecosystem development.
+<p class="text-secondary leading-relaxed">
+              AGT's significance extends beyond technical capability to strategic positioning. Microsoft explicitly designed AGT for vendor neutrality, with documented integrations for AWS Bedrock, Google ADK, Azure AI, LangChain, CrewAI, AutoGen, OpenAI Agents SDK, LlamaIndex, and "more"—a deliberate architectural choice to establish industry standard rather than proprietary advantage. The toolkit's aspiration for foundation governance signals long-term commitment to ecosystem development.
             </p>
-          </div>
-        </div>
-      </section>
-
-      <!-- Direct Match: AGT -->
-      <section id="direct-match" class="py-16 px-8 bg-gray-50">
-        <div class="max-w-6xl mx-auto">
-          <h2 class="font-serif text-3xl font-bold mb-8 text-primary">Direct Match: Microsoft Agent Governance Toolkit</h2>
-
-          <div class="mb-12">
-            <img src="https://github.com/microsoft/agent-governance-toolkit/blob/main/docs/assets/readme-banner.svg" alt="Microsoft Agent Governance Toolkit architecture diagram" class="rounded-lg shadow-lg mb-6 w-full max-w-4xl mx-auto" size="large" aspect="wide" style="linedrawing" query="Microsoft Agent Governance Toolkit architecture" referrerpolicy="no-referrer" data-modified="1" data-score="0.00"/>
-          </div>
-
-          <div class="grid grid-cols-1 gap-8 mb-12">
-            <div>
-              <h3 class="font-serif text-xl font-semibold mb-4">Seven-Package Architecture</h3>
-              <ul class="space-y-3 text-secondary">
-                <li class="flex items-start">
-                  <i class="fas fa-shield-alt text-accent mr-3 mt-1"></i>
-                  <div>
-                    <strong>Agent OS:</strong> Policy decisioning and enforcement (&lt;0.1ms p99 latency)
+</div>
+</div>
+</section>
+<!-- Direct Match: AGT -->
+<section class="py-16 px-8 bg-gray-50" id="direct-match">
+<div class="max-w-6xl mx-auto">
+<h2 class="font-serif text-3xl font-bold mb-8 text-primary">Direct Match: Microsoft Agent Governance Toolkit</h2>
+<div class="mb-12">
+<img alt="Microsoft Agent Governance Toolkit architecture diagram" aspect="wide" class="rounded-lg shadow-lg mb-6 w-full max-w-4xl mx-auto" data-modified="1" data-score="0.00" query="Microsoft Agent Governance Toolkit architecture" referrerpolicy="no-referrer" size="large" src="img/15821992ab.svg" style="linedrawing"/>
+</div>
+<div class="grid grid-cols-1 gap-8 mb-12">
+<div>
+<h3 class="font-serif text-xl font-semibold mb-4">Seven-Package Architecture</h3>
+<ul class="space-y-3 text-secondary">
+<li class="flex items-start">
+<i class="fas fa-shield-alt text-accent mr-3 mt-1"></i>
+<div>
+<strong>Agent OS:</strong> Policy decisioning and enforcement (&lt;0.1ms p99 latency)
                   </div>
-                </li>
-                <li class="flex items-start">
-                  <i class="fas fa-id-card text-accent mr-3 mt-1"></i>
-                  <div>
-                    <strong>Agent Mesh:</strong> Cryptographic identity with DIDs and trust scoring
+</li>
+<li class="flex items-start">
+<i class="fas fa-id-card text-accent mr-3 mt-1"></i>
+<div>
+<strong>Agent Mesh:</strong> Cryptographic identity with DIDs and trust scoring
                   </div>
-                </li>
-                <li class="flex items-start">
-                  <i class="fas fa-cogs text-accent mr-3 mt-1"></i>
-                  <div>
-                    <strong>Agent Runtime:</strong> Execution rings and kill switches for safety
+</li>
+<li class="flex items-start">
+<i class="fas fa-cogs text-accent mr-3 mt-1"></i>
+<div>
+<strong>Agent Runtime:</strong> Execution rings and kill switches for safety
                   </div>
-                </li>
-                <li class="flex items-start">
-                  <i class="fas fa-heartbeat text-accent mr-3 mt-1"></i>
-                  <div>
-                    <strong>Agent SRE:</strong> Reliability engineering with SLOs and circuit breakers
+</li>
+<li class="flex items-start">
+<i class="fas fa-heartbeat text-accent mr-3 mt-1"></i>
+<div>
+<strong>Agent SRE:</strong> Reliability engineering with SLOs and circuit breakers
                   </div>
-                </li>
-                <li class="flex items-start">
-                  <i class="fas fa-clipboard-check text-accent mr-3 mt-1"></i>
-                  <div>
-                    <strong>Agent Compliance:</strong> Regulatory mapping (HIPAA, EU AI Act, SOC 2)
+</li>
+<li class="flex items-start">
+<i class="fas fa-clipboard-check text-accent mr-3 mt-1"></i>
+<div>
+<strong>Agent Compliance:</strong> Regulatory mapping (HIPAA, EU AI Act, SOC 2)
                   </div>
-                </li>
-                <li class="flex items-start">
-                  <i class="fas fa-store text-accent mr-3 mt-1"></i>
-                  <div>
-                    <strong>Agent Marketplace:</strong> Supply chain security for plugins
+</li>
+<li class="flex items-start">
+<i class="fas fa-store text-accent mr-3 mt-1"></i>
+<div>
+<strong>Agent Marketplace:</strong> Supply chain security for plugins
                   </div>
-                </li>
-                <li class="flex items-start">
-                  <i class="fas fa-bolt text-accent mr-3 mt-1"></i>
-                  <div>
-                    <strong>Agent Lightning:</strong> Training governance for RL workflows
+</li>
+<li class="flex items-start">
+<i class="fas fa-bolt text-accent mr-3 mt-1"></i>
+<div>
+<strong>Agent Lightning:</strong> Training governance for RL workflows
                   </div>
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="bg-white border border-gray-200 rounded-lg p-6 mb-8">
-            <h4 class="font-semibold mb-4 text-accent">Runtime Enforcement Characteristics</h4>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-              <div class="text-center">
-                <div class="text-2xl font-bold text-accent mb-2">
+</li>
+</ul>
+</div>
+</div>
+<div class="bg-white border border-gray-200 rounded-lg p-6 mb-8">
+<h4 class="font-semibold mb-4 text-accent">Runtime Enforcement Characteristics</h4>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+<div class="text-center">
+<div class="text-2xl font-bold text-accent mb-2">
                   &lt; 0.1ms</div>
-                    <div class="text-sm text-secondary">99th percentile latency</div>
-                </div>
-                <div class="text-center">
-                  <div class="text-2xl font-bold text-accent mb-2">Deterministic</div>
-                  <div class="text-sm text-secondary">Policy decisions</div>
-                </div>
-                <div class="text-center">
-                  <div class="text-2xl font-bold text-accent mb-2">Merkle Chains</div>
-                  <div class="text-sm text-secondary">Tamper-evident audit</div>
-                </div>
-              </div>
-            </div>
-
-            <div class="prose max-w-none">
-              <h4 class="font-semibold mb-3">Framework Integration Strategy</h4>
-              <p class="text-secondary leading-relaxed mb-4">
-                AGT&#39;s broad framework integration demonstrates vendor-neutral commitment with documented support for LangChain, AutoGen, CrewAI, Google ADK, OpenAI Agents SDK, Azure AI Foundry, LlamaIndex, and Semantic Kernel. The integration pattern varies by framework maturity, with deep integration for native Microsoft frameworks, standard integration through public APIs for third-party frameworks, and managed service integration for platform deployments.
+<div class="text-sm text-secondary">99th percentile latency</div>
+</div>
+<div class="text-center">
+<div class="text-2xl font-bold text-accent mb-2">Deterministic</div>
+<div class="text-sm text-secondary">Policy decisions</div>
+</div>
+<div class="text-center">
+<div class="text-2xl font-bold text-accent mb-2">Merkle Chains</div>
+<div class="text-sm text-secondary">Tamper-evident audit</div>
+</div>
+</div>
+</div>
+<div class="prose max-w-none">
+<h4 class="font-semibold mb-3">Framework Integration Strategy</h4>
+<p class="text-secondary leading-relaxed mb-4">
+                AGT's broad framework integration demonstrates vendor-neutral commitment with documented support for LangChain, AutoGen, CrewAI, Google ADK, OpenAI Agents SDK, Azure AI Foundry, LlamaIndex, and Semantic Kernel. The integration pattern varies by framework maturity, with deep integration for native Microsoft frameworks, standard integration through public APIs for third-party frameworks, and managed service integration for platform deployments.
               </p>
-              <p class="text-secondary leading-relaxed">
+<p class="text-secondary leading-relaxed">
                 This integration strategy enables organizations to maintain framework agility while implementing consistent governance policies across their entire agent portfolio. The MIT license and foundation governance aspiration signal long-term commitment to ecosystem development rather than proprietary lock-in.
               </p>
-            </div>
-          </div>
-      </section>
-
-      <!-- Complementary Layer -->
-      <section id="complementary-layer" class="py-16 px-8 bg-white">
-        <div class="max-w-6xl mx-auto">
-          <h2 class="font-serif text-3xl font-bold mb-8 text-primary">Complementary Layer: NVIDIA OpenShell</h2>
-
-          <div class="bg-yellow-50 border-l-4 border-yellow-400 p-6 mb-8">
-            <h3 class="font-semibold mb-3">Defense-in-Depth Architecture</h3>
-            <p class="text-secondary">
-              Microsoft and NVIDIA have explicitly documented complementary integration: AGT provides &#34;governance intelligence&#34; (identity, trust, policy decisions) while OpenShell provides &#34;runtime isolation&#34; (container sandboxing, network egress control). This defense-in-depth architecture indicates that even the most comprehensive governance layer requires complementary components for full-stack protection.
+</div>
+</div>
+</section>
+<!-- Complementary Layer -->
+<section class="py-16 px-8 bg-white" id="complementary-layer">
+<div class="max-w-6xl mx-auto">
+<h2 class="font-serif text-3xl font-bold mb-8 text-primary">Complementary Layer: NVIDIA OpenShell</h2>
+<div class="bg-yellow-50 border-l-4 border-yellow-400 p-6 mb-8">
+<h3 class="font-semibold mb-3">Defense-in-Depth Architecture</h3>
+<p class="text-secondary">
+              Microsoft and NVIDIA have explicitly documented complementary integration: AGT provides "governance intelligence" (identity, trust, policy decisions) while OpenShell provides "runtime isolation" (container sandboxing, network egress control). This defense-in-depth architecture indicates that even the most comprehensive governance layer requires complementary components for full-stack protection.
             </p>
-          </div>
-
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-            <div class="bg-gray-50 p-6 rounded-lg">
-              <h4 class="font-semibold mb-4 text-accent">AGT Governance Intelligence</h4>
-              <ul class="space-y-2 text-sm text-secondary">
-                <li>• Identity verification and trust scoring</li>
-                <li>• Dynamic policy decisioning</li>
-                <li>• Authority delegation management</li>
-                <li>• Audit logging and compliance mapping</li>
-                <li>• &lt; 0.1ms evaluation latency</li>
-              </ul>
-            </div>
-            <div class="bg-gray-50 p-6 rounded-lg">
-              <h4 class="font-semibold mb-4 text-accent">OpenShell Runtime Isolation</h4>
-              <ul class="space-y-2 text-sm text-secondary">
-                <li>• Container sandboxing with namespaces</li>
-                <li>• Filesystem access policies with quotas</li>
-                <li>• Network egress control</li>
-                <li>• System call restrictions with seccomp-bpf</li>
-                <li>• Static policy enforcement</li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="prose max-w-none">
-            <h4 class="font-semibold mb-3">Integration Pattern</h4>
-            <p class="text-secondary leading-relaxed mb-4">
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+<div class="bg-gray-50 p-6 rounded-lg">
+<h4 class="font-semibold mb-4 text-accent">AGT Governance Intelligence</h4>
+<ul class="space-y-2 text-sm text-secondary">
+<li>• Identity verification and trust scoring</li>
+<li>• Dynamic policy decisioning</li>
+<li>• Authority delegation management</li>
+<li>• Audit logging and compliance mapping</li>
+<li>• &lt; 0.1ms evaluation latency</li>
+</ul>
+</div>
+<div class="bg-gray-50 p-6 rounded-lg">
+<h4 class="font-semibold mb-4 text-accent">OpenShell Runtime Isolation</h4>
+<ul class="space-y-2 text-sm text-secondary">
+<li>• Container sandboxing with namespaces</li>
+<li>• Filesystem access policies with quotas</li>
+<li>• Network egress control</li>
+<li>• System call restrictions with seccomp-bpf</li>
+<li>• Static policy enforcement</li>
+</ul>
+</div>
+</div>
+<div class="prose max-w-none">
+<h4 class="font-semibold mb-3">Integration Pattern</h4>
+<p class="text-secondary leading-relaxed mb-4">
               The integration pattern follows explicit defense-in-depth principles: AGT evaluates policy at the application layer, making intelligent decisions about who should perform what actions and why, while OpenShell enforces resource constraints at the infrastructure layer, determining where and how those actions can execute.
             </p>
-            <p class="text-secondary leading-relaxed mb-4">
+<p class="text-secondary leading-relaxed mb-4">
               Example workflow: An agent requests GitHub API POST → AGT evaluates (identity verified, trust score 0.82 &gt; 0.5 threshold, policy permits, authority delegated) → OpenShell evaluates (network policy permits github.com:443, process policy permits curl binary) → Action executes with both layers logging.
             </p>
-            <p class="text-secondary leading-relaxed">
-              This two-layer evaluation ensures comprehensive coverage with clear responsibility separation. AGT&#39;s dynamic, context-aware policy evaluation complements OpenShell&#39;s static, resource-focused enforcement. Neither layer can be bypassed through the other—AGT policy violation prevents execution regardless of OpenShell permissions; OpenShell resource violation prevents execution regardless of AGT authorization.
+<p class="text-secondary leading-relaxed">
+              This two-layer evaluation ensures comprehensive coverage with clear responsibility separation. AGT's dynamic, context-aware policy evaluation complements OpenShell's static, resource-focused enforcement. Neither layer can be bypassed through the other—AGT policy violation prevents execution regardless of OpenShell permissions; OpenShell resource violation prevents execution regardless of AGT authorization.
             </p>
-          </div>
-        </div>
-      </section>
-
-      <!-- Partial Matches -->
-      <section id="partial-matches" class="py-16 px-8 bg-gray-50">
-        <div class="max-w-6xl mx-auto">
-          <h2 class="font-serif text-3xl font-bold mb-8 text-primary">Partial Matches: Control Plane Solutions</h2>
-
-          <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
-            <div class="bg-white p-6 rounded-lg shadow-sm">
-              <h3 class="font-semibold mb-4 text-accent">Galileo Agent Control</h3>
-              <p class="text-sm text-secondary mb-4">Centralized policy layer with &#34;write policies once, enforce everywhere&#34; approach. Released March 11, 2026.</p>
-              <div class="space-y-2 text-sm">
-                <div class="flex items-center">
-                  <i class="fas fa-check text-green-500 mr-2"></i>
-                  <span>Runtime mitigation capability</span>
-                </div>
-                <div class="flex items-center">
-                  <i class="fas fa-check text-green-500 mr-2"></i>
-                  <span>Real-time policy updates</span>
-                </div>
-                <div class="flex items-center">
-                  <i class="fas fa-times text-red-500 mr-2"></i>
-                  <span>No native identity/trust scoring</span>
-                </div>
-                <div class="flex items-center">
-                  <i class="fas fa-times text-red-500 mr-2"></i>
-                  <span>Limited audit capabilities</span>
-                </div>
+</div>
+</div>
+</section>
+<!-- Partial Matches -->
+<section class="py-16 px-8 bg-gray-50" id="partial-matches">
+<div class="max-w-6xl mx-auto">
+<h2 class="font-serif text-3xl font-bold mb-8 text-primary">Partial Matches: Control Plane Solutions</h2>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
+<div class="bg-white p-6 rounded-lg shadow-sm">
+<h3 class="font-semibold mb-4 text-accent">Galileo Agent Control</h3>
+<p class="text-sm text-secondary mb-4">Centralized policy layer with "write policies once, enforce everywhere" approach. Released March 11, 2026.</p>
+<div class="space-y-2 text-sm">
+<div class="flex items-center">
+<i class="fas fa-check text-green-500 mr-2"></i>
+<span>Runtime mitigation capability</span>
+</div>
+<div class="flex items-center">
+<i class="fas fa-check text-green-500 mr-2"></i>
+<span>Real-time policy updates</span>
+</div>
+<div class="flex items-center">
+<i class="fas fa-times text-red-500 mr-2"></i>
+<span>No native identity/trust scoring</span>
+</div>
+<div class="flex items-center">
+<i class="fas fa-times text-red-500 mr-2"></i>
+<span>Limited audit capabilities</span>
+</div>
+</div>
+</div>
+<div class="bg-white p-6 rounded-lg shadow-sm">
+<h3 class="font-semibold mb-4 text-accent">HumanLayer ACP</h3>
+<p class="text-sm text-secondary mb-4">Kubernetes-native orchestration with human-in-the-loop focus for outer-loop agents.</p>
+<div class="space-y-2 text-sm">
+<div class="flex items-center">
+<i class="fas fa-check text-green-500 mr-2"></i>
+<span>Kubernetes Operator pattern</span>
+</div>
+<div class="flex items-center">
+<i class="fas fa-check text-green-500 mr-2"></i>
+<span>Asynchronous tool call patterns</span>
+</div>
+<div class="flex items-center">
+<i class="fas fa-times text-red-500 mr-2"></i>
+<span>Narrow scope (human-in-loop only)</span>
+</div>
+<div class="flex items-center">
+<i class="fas fa-times text-red-500 mr-2"></i>
+<span>Alpha status maturity</span>
+</div>
+</div>
+</div>
+<div class="bg-white p-6 rounded-lg shadow-sm">
+<h3 class="font-semibold mb-4 text-accent">Nasiko</h3>
+<p class="text-sm text-secondary mb-4">Developer control plane with orchestration, deployment, and cost monitoring capabilities.</p>
+<div class="space-y-2 text-sm">
+<div class="flex items-center">
+<i class="fas fa-check text-green-500 mr-2"></i>
+<span>Docker Compose development</span>
+</div>
+<div class="flex items-center">
+<i class="fas fa-check text-green-500 mr-2"></i>
+<span>Cost monitoring focus</span>
+</div>
+<div class="flex items-center">
+<i class="fas fa-times text-red-500 mr-2"></i>
+<span>Insufficient governance evidence</span>
+</div>
+<div class="flex items-center">
+<i class="fas fa-times text-red-500 mr-2"></i>
+<span>Limited scope (LLM outputs only)</span>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-white border border-gray-200 rounded-lg p-6">
+<h4 class="font-semibold mb-4">Classification Rationale for Partial Matches</h4>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div>
+<h5 class="font-medium mb-3 text-accent">Why Partial Match?</h5>
+<ul class="space-y-2 text-sm text-secondary">
+<li>• Significant governance capabilities but with material gaps</li>
+<li>• Narrow focus on specific governance aspects</li>
+<li>• Lacks comprehensive runtime enforcement</li>
+<li>• Missing critical components like identity or audit</li>
+</ul>
+</div>
+<div>
+<h5 class="font-medium mb-3 text-accent">Use Cases</h5>
+<ul class="space-y-2 text-sm text-secondary">
+<li>• Policy centralization requirements (Galileo)</li>
+<li>• Human-in-the-loop focus (HumanLayer)</li>
+<li>• Developer experience emphasis (Nasiko)</li>
+<li>• Complementary to comprehensive governance</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Adjacent Tools -->
+<section class="py-16 px-8 bg-white" id="adjacent-tools">
+<div class="max-w-6xl mx-auto">
+<h2 class="font-serif text-3xl font-bold mb-8 text-primary">Adjacent Tools and Frameworks</h2>
+<div class="mb-12">
+<img alt="AI governance tools ecosystem" aspect="wide" class="rounded-lg shadow-lg w-full max-w-4xl mx-auto" data-modified="1" data-score="0.00" query="AI governance tools ecosystem" referrerpolicy="no-referrer" size="large" src="img/ef129447fc.jpg"/>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
+<div class="bg-gray-50 p-6 rounded-lg">
+<h3 class="font-semibold mb-4 text-accent">Agent Frameworks</h3>
+<ul class="space-y-3 text-sm text-secondary">
+<li><strong>LangGraph:</strong> Stateful orchestration with human-in-the-loop nodes</li>
+<li><strong>Semantic Kernel:</strong> Enterprise integration with pluggable memory</li>
+<li><strong>AutoGen:</strong> Multi-agent conversation patterns</li>
+<li><strong>CrewAI:</strong> Role-based orchestration with process patterns</li>
+</ul>
+<div class="mt-4 p-3 bg-yellow-100 rounded text-sm">
+<strong>Why Adjacent?</strong> Provide governance hooks but require external enforcement layer
               </div>
-            </div>
-
-            <div class="bg-white p-6 rounded-lg shadow-sm">
-              <h3 class="font-semibold mb-4 text-accent">HumanLayer ACP</h3>
-              <p class="text-sm text-secondary mb-4">Kubernetes-native orchestration with human-in-the-loop focus for outer-loop agents.</p>
-              <div class="space-y-2 text-sm">
-                <div class="flex items-center">
-                  <i class="fas fa-check text-green-500 mr-2"></i>
-                  <span>Kubernetes Operator pattern</span>
-                </div>
-                <div class="flex items-center">
-                  <i class="fas fa-check text-green-500 mr-2"></i>
-                  <span>Asynchronous tool call patterns</span>
-                </div>
-                <div class="flex items-center">
-                  <i class="fas fa-times text-red-500 mr-2"></i>
-                  <span>Narrow scope (human-in-loop only)</span>
-                </div>
-                <div class="flex items-center">
-                  <i class="fas fa-times text-red-500 mr-2"></i>
-                  <span>Alpha status maturity</span>
-                </div>
+</div>
+<div class="bg-gray-50 p-6 rounded-lg">
+<h3 class="font-semibold mb-4 text-accent">Policy Engines</h3>
+<ul class="space-y-3 text-sm text-secondary">
+<li><strong>OPA:</strong> Mature policy evaluation with Rego language</li>
+<li><strong>AccuKnox:</strong> Kubernetes-native runtime enforcement</li>
+<li><strong>Protect AI:</strong> ML supply chain security and model scanning</li>
+<li><strong>Robust Intelligence:</strong> AI risk validation and model testing</li>
+</ul>
+<div class="mt-4 p-3 bg-yellow-100 rounded text-sm">
+<strong>Why Adjacent?</strong> General-purpose or model-level, not agent-action governance
               </div>
-            </div>
-
-            <div class="bg-white p-6 rounded-lg shadow-sm">
-              <h3 class="font-semibold mb-4 text-accent">Nasiko</h3>
-              <p class="text-sm text-secondary mb-4">Developer control plane with orchestration, deployment, and cost monitoring capabilities.</p>
-              <div class="space-y-2 text-sm">
-                <div class="flex items-center">
-                  <i class="fas fa-check text-green-500 mr-2"></i>
-                  <span>Docker Compose development</span>
+</div>
+<div class="bg-gray-50 p-6 rounded-lg">
+<h3 class="font-semibold mb-4 text-accent">Observability</h3>
+<ul class="space-y-3 text-sm text-secondary">
+<li><strong>LangSmith:</strong> Agent tracing and evaluation</li>
+<li><strong>AgentOps:</strong> Performance monitoring and metrics</li>
+<li><strong>Arize AI:</strong> ML observability and drift detection</li>
+<li><strong>Fiddler:</strong> Model monitoring and explanation</li>
+</ul>
+<div class="mt-4 p-3 bg-yellow-100 rounded text-sm">
+<strong>Why Adjacent?</strong> Post-hoc observation, no runtime enforcement
+              </div>
+</div>
+</div>
+<div class="bg-blue-50 border border-blue-200 rounded-lg p-6">
+<h4 class="font-semibold mb-4">Healthcare-Specific Adjacent Projects</h4>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div>
+<h5 class="font-medium mb-2">HAARF: Healthcare AI Agents Regulatory Framework</h5>
+<p class="text-sm text-secondary mb-3">Most comprehensive regulatory synthesis with explicit limitation: evaluation harness, not runtime layer.</p>
+<div class="text-xs text-muted">
+<strong>Coverage:</strong> NIST AI RMF (88%), FDA TPLC (84%), EU AI Act (71%)
                 </div>
-                <div class="flex items-center">
-                  <i class="fas fa-check text-green-500 mr-2"></i>
-                  <span>Cost monitoring focus</span>
+</div>
+<div>
+<h5 class="font-medium mb-2">Microsoft Healthcare AI Examples</h5>
+<p class="text-sm text-secondary mb-3">Research and development focus with explicit disclaimer: not for clinical deployment as-is.</p>
+<div class="text-xs text-muted">
+<strong>Models:</strong> MedImageInsight, MedImageParse, CXRReportGen
                 </div>
-                <div class="flex items-center">
-                  <i class="fas fa-times text-red-500 mr-2"></i>
-                  <span>Insufficient governance evidence</span>
-                </div>
-                <div class="flex items-center">
-                  <i class="fas fa-times text-red-500 mr-2"></i>
-                  <span>Limited scope (LLM outputs only)</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="bg-white border border-gray-200 rounded-lg p-6">
-            <h4 class="font-semibold mb-4">Classification Rationale for Partial Matches</h4>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div>
-                <h5 class="font-medium mb-3 text-accent">Why Partial Match?</h5>
-                <ul class="space-y-2 text-sm text-secondary">
-                  <li>• Significant governance capabilities but with material gaps</li>
-                  <li>• Narrow focus on specific governance aspects</li>
-                  <li>• Lacks comprehensive runtime enforcement</li>
-                  <li>• Missing critical components like identity or audit</li>
-                </ul>
-              </div>
-              <div>
-                <h5 class="font-medium mb-3 text-accent">Use Cases</h5>
-                <ul class="space-y-2 text-sm text-secondary">
-                  <li>• Policy centralization requirements (Galileo)</li>
-                  <li>• Human-in-the-loop focus (HumanLayer)</li>
-                  <li>• Developer experience emphasis (Nasiko)</li>
-                  <li>• Complementary to comprehensive governance</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Adjacent Tools -->
-      <section id="adjacent-tools" class="py-16 px-8 bg-white">
-        <div class="max-w-6xl mx-auto">
-          <h2 class="font-serif text-3xl font-bold mb-8 text-primary">Adjacent Tools and Frameworks</h2>
-
-          <div class="mb-12">
-            <img src="https://kimi-web-img.moonshot.cn/img/cdn.prod.website-files.com/c7b352c9779b13d21a400932b23e88250afb79db.jpg" alt="AI governance tools ecosystem" class="rounded-lg shadow-lg w-full max-w-4xl mx-auto" size="large" aspect="wide" query="AI governance tools ecosystem" referrerpolicy="no-referrer" data-modified="1" data-score="0.00"/>
-          </div>
-
-          <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
-            <div class="bg-gray-50 p-6 rounded-lg">
-              <h3 class="font-semibold mb-4 text-accent">Agent Frameworks</h3>
-              <ul class="space-y-3 text-sm text-secondary">
-                <li><strong>LangGraph:</strong> Stateful orchestration with human-in-the-loop nodes</li>
-                <li><strong>Semantic Kernel:</strong> Enterprise integration with pluggable memory</li>
-                <li><strong>AutoGen:</strong> Multi-agent conversation patterns</li>
-                <li><strong>CrewAI:</strong> Role-based orchestration with process patterns</li>
-              </ul>
-              <div class="mt-4 p-3 bg-yellow-100 rounded text-sm">
-                <strong>Why Adjacent?</strong> Provide governance hooks but require external enforcement layer
-              </div>
-            </div>
-
-            <div class="bg-gray-50 p-6 rounded-lg">
-              <h3 class="font-semibold mb-4 text-accent">Policy Engines</h3>
-              <ul class="space-y-3 text-sm text-secondary">
-                <li><strong>OPA:</strong> Mature policy evaluation with Rego language</li>
-                <li><strong>AccuKnox:</strong> Kubernetes-native runtime enforcement</li>
-                <li><strong>Protect AI:</strong> ML supply chain security and model scanning</li>
-                <li><strong>Robust Intelligence:</strong> AI risk validation and model testing</li>
-              </ul>
-              <div class="mt-4 p-3 bg-yellow-100 rounded text-sm">
-                <strong>Why Adjacent?</strong> General-purpose or model-level, not agent-action governance
-              </div>
-            </div>
-
-            <div class="bg-gray-50 p-6 rounded-lg">
-              <h3 class="font-semibold mb-4 text-accent">Observability</h3>
-              <ul class="space-y-3 text-sm text-secondary">
-                <li><strong>LangSmith:</strong> Agent tracing and evaluation</li>
-                <li><strong>AgentOps:</strong> Performance monitoring and metrics</li>
-                <li><strong>Arize AI:</strong> ML observability and drift detection</li>
-                <li><strong>Fiddler:</strong> Model monitoring and explanation</li>
-              </ul>
-              <div class="mt-4 p-3 bg-yellow-100 rounded text-sm">
-                <strong>Why Adjacent?</strong> Post-hoc observation, no runtime enforcement
-              </div>
-            </div>
-          </div>
-
-          <div class="bg-blue-50 border border-blue-200 rounded-lg p-6">
-            <h4 class="font-semibold mb-4">Healthcare-Specific Adjacent Projects</h4>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div>
-                <h5 class="font-medium mb-2">HAARF: Healthcare AI Agents Regulatory Framework</h5>
-                <p class="text-sm text-secondary mb-3">Most comprehensive regulatory synthesis with explicit limitation: evaluation harness, not runtime layer.</p>
-                <div class="text-xs text-muted">
-                  <strong>Coverage:</strong> NIST AI RMF (88%), FDA TPLC (84%), EU AI Act (71%)
-                </div>
-              </div>
-              <div>
-                <h5 class="font-medium mb-2">Microsoft Healthcare AI Examples</h5>
-                <p class="text-sm text-secondary mb-3">Research and development focus with explicit disclaimer: not for clinical deployment as-is.</p>
-                <div class="text-xs text-muted">
-                  <strong>Models:</strong> MedImageInsight, MedImageParse, CXRReportGen
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Healthcare Track -->
-      <section id="healthcare-track" class="py-16 px-8 bg-gray-50">
-        <div class="max-w-6xl mx-auto">
-          <h2 class="font-serif text-3xl font-bold mb-8 text-primary">Healthcare Track: Detailed Assessment</h2>
-
-          <div class="bg-red-50 border-l-4 border-red-400 p-6 mb-8">
-            <h3 class="font-semibold mb-3 text-red-800">Critical Gap: No Healthcare-Native Runtime Governance</h3>
-            <p class="text-red-700">
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Healthcare Track -->
+<section class="py-16 px-8 bg-gray-50" id="healthcare-track">
+<div class="max-w-6xl mx-auto">
+<h2 class="font-serif text-3xl font-bold mb-8 text-primary">Healthcare Track: Detailed Assessment</h2>
+<div class="bg-red-50 border-l-4 border-red-400 p-6 mb-8">
+<h3 class="font-semibold mb-3 text-red-800">Critical Gap: No Healthcare-Native Runtime Governance</h3>
+<p class="text-red-700">
               The most significant finding: no open-source project provides runtime governance with built-in clinical semantics, EHR integration, FDA-aligned change control, and healthcare organization validation. Organizations must adapt general-purpose tools with associated implementation burden.
             </p>
-          </div>
-
-          <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
-            <div class="bg-white p-6 rounded-lg">
-              <h3 class="font-semibold mb-4 text-accent">Regulatory Landscape</h3>
-              <div class="space-y-4">
-                <div class="border-l-4 border-blue-400 pl-4">
-                  <h4 class="font-medium text-sm">EU AI Act (High-Risk)</h4>
-                  <p class="text-xs text-secondary">Effective August 2026. AGT provides comprehensive mapping for risk management, data governance, documentation, human oversight, and cybersecurity controls.</p>
-                </div>
-                <div class="border-l-4 border-green-400 pl-4">
-                  <h4 class="font-medium text-sm">HIPAA Security Rule</h4>
-                  <p class="text-xs text-secondary">Technical Safeguards mapping for access control, audit control, integrity, authentication, and transmission security.</p>
-                </div>
-                <div class="border-l-4 border-yellow-400 pl-4">
-                  <h4 class="font-medium text-sm">FDA TPLC/SaMD</h4>
-                  <p class="text-xs text-secondary">Predetermined change control and algorithmic drift monitoring through deterministic policy and SRE practices.</p>
-                </div>
-              </div>
-            </div>
-
-            <div class="bg-white p-6 rounded-lg">
-              <h3 class="font-semibold mb-4 text-accent">Healthcare Requirements Gap Analysis</h3>
-              <div class="space-y-3 text-sm">
-                <div class="flex justify-between items-center">
-                  <span>PHI Segmentation</span>
-                  <div class="flex items-center">
-                    <div class="w-24 bg-gray-200 rounded-full h-2 mr-2">
-                      <div class="bg-yellow-400 h-2 rounded-full" style="width: 60%"></div>
-                    </div>
-                    <span class="text-xs">Partial</span>
-                  </div>
-                </div>
-                <div class="flex justify-between items-center">
-                  <span>Clinical Scope of Practice</span>
-                  <div class="flex items-center">
-                    <div class="w-24 bg-gray-200 rounded-full h-2 mr-2">
-                      <div class="bg-yellow-400 h-2 rounded-full" style="width: 50%"></div>
-                    </div>
-                    <span class="text-xs">Partial</span>
-                  </div>
-                </div>
-                <div class="flex justify-between items-center">
-                  <span>Non-Human Identity</span>
-                  <div class="flex items-center">
-                    <div class="w-24 bg-gray-200 rounded-full h-2 mr-2">
-                      <div class="bg-green-400 h-2 rounded-full" style="width: 90%"></div>
-                    </div>
-                    <span class="text-xs">Strong</span>
-                  </div>
-                </div>
-                <div class="flex justify-between items-center">
-                  <span>Clinical Audit Trails</span>
-                  <div class="flex items-center">
-                    <div class="w-24 bg-gray-200 rounded-full h-2 mr-2">
-                      <div class="bg-green-400 h-2 rounded-full" style="width: 85%"></div>
-                    </div>
-                    <span class="text-xs">Strong</span>
-                  </div>
-                </div>
-                <div class="flex justify-between items-center">
-                  <span>Human-in-the-Loop</span>
-                  <div class="flex items-center">
-                    <div class="w-24 bg-gray-200 rounded-full h-2 mr-2">
-                      <div class="bg-green-400 h-2 rounded-full" style="width: 80%"></div>
-                    </div>
-                    <span class="text-xs">Strong</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="prose max-w-none">
-            <h3 class="font-serif text-xl font-semibold mb-4">Strategic Options for Healthcare Organizations</h3>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <div class="bg-white p-6 rounded-lg border border-gray-200">
-                <h4 class="font-semibold mb-3 text-accent">Adapt AGT</h4>
-                <p class="text-sm text-secondary mb-3">Implement healthcare-specific policy libraries, clinical workflow integration, and validation.</p>
-                <div class="text-xs text-muted">
-                  <strong>Pros:</strong> Highest capability foundation
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+<div class="bg-white p-6 rounded-lg">
+<h3 class="font-semibold mb-4 text-accent">Regulatory Landscape</h3>
+<div class="space-y-4">
+<div class="border-l-4 border-blue-400 pl-4">
+<h4 class="font-medium text-sm">EU AI Act (High-Risk)</h4>
+<p class="text-xs text-secondary">Effective August 2026. AGT provides comprehensive mapping for risk management, data governance, documentation, human oversight, and cybersecurity controls.</p>
+</div>
+<div class="border-l-4 border-green-400 pl-4">
+<h4 class="font-medium text-sm">HIPAA Security Rule</h4>
+<p class="text-xs text-secondary">Technical Safeguards mapping for access control, audit control, integrity, authentication, and transmission security.</p>
+</div>
+<div class="border-l-4 border-yellow-400 pl-4">
+<h4 class="font-medium text-sm">FDA TPLC/SaMD</h4>
+<p class="text-xs text-secondary">Predetermined change control and algorithmic drift monitoring through deterministic policy and SRE practices.</p>
+</div>
+</div>
+</div>
+<div class="bg-white p-6 rounded-lg">
+<h3 class="font-semibold mb-4 text-accent">Healthcare Requirements Gap Analysis</h3>
+<div class="space-y-3 text-sm">
+<div class="flex justify-between items-center">
+<span>PHI Segmentation</span>
+<div class="flex items-center">
+<div class="w-24 bg-gray-200 rounded-full h-2 mr-2">
+<div class="bg-yellow-400 h-2 rounded-full" style="width: 60%"></div>
+</div>
+<span class="text-xs">Partial</span>
+</div>
+</div>
+<div class="flex justify-between items-center">
+<span>Clinical Scope of Practice</span>
+<div class="flex items-center">
+<div class="w-24 bg-gray-200 rounded-full h-2 mr-2">
+<div class="bg-yellow-400 h-2 rounded-full" style="width: 50%"></div>
+</div>
+<span class="text-xs">Partial</span>
+</div>
+</div>
+<div class="flex justify-between items-center">
+<span>Non-Human Identity</span>
+<div class="flex items-center">
+<div class="w-24 bg-gray-200 rounded-full h-2 mr-2">
+<div class="bg-green-400 h-2 rounded-full" style="width: 90%"></div>
+</div>
+<span class="text-xs">Strong</span>
+</div>
+</div>
+<div class="flex justify-between items-center">
+<span>Clinical Audit Trails</span>
+<div class="flex items-center">
+<div class="w-24 bg-gray-200 rounded-full h-2 mr-2">
+<div class="bg-green-400 h-2 rounded-full" style="width: 85%"></div>
+</div>
+<span class="text-xs">Strong</span>
+</div>
+</div>
+<div class="flex justify-between items-center">
+<span>Human-in-the-Loop</span>
+<div class="flex items-center">
+<div class="w-24 bg-gray-200 rounded-full h-2 mr-2">
+<div class="bg-green-400 h-2 rounded-full" style="width: 80%"></div>
+</div>
+<span class="text-xs">Strong</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="prose max-w-none">
+<h3 class="font-serif text-xl font-semibold mb-4">Strategic Options for Healthcare Organizations</h3>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="bg-white p-6 rounded-lg border border-gray-200">
+<h4 class="font-semibold mb-3 text-accent">Adapt AGT</h4>
+<p class="text-sm text-secondary mb-3">Implement healthcare-specific policy libraries, clinical workflow integration, and validation.</p>
+<div class="text-xs text-muted">
+<strong>Pros:</strong> Highest capability foundation
                   <br/>
-                  <strong>Cons:</strong> Highest implementation investment
+<strong>Cons:</strong> Highest implementation investment
                 </div>
-              </div>
-              <div class="bg-white p-6 rounded-lg border border-gray-200">
-                <h4 class="font-semibold mb-3 text-accent">Await Specialization</h4>
-                <p class="text-sm text-secondary mb-3">Monitor for AGT healthcare specialization or new healthcare-native project.</p>
-                <div class="text-xs text-muted">
-                  <strong>Pros:</strong> Lower immediate investment
+</div>
+<div class="bg-white p-6 rounded-lg border border-gray-200">
+<h4 class="font-semibold mb-3 text-accent">Await Specialization</h4>
+<p class="text-sm text-secondary mb-3">Monitor for AGT healthcare specialization or new healthcare-native project.</p>
+<div class="text-xs text-muted">
+<strong>Pros:</strong> Lower immediate investment
                   <br/>
-                  <strong>Cons:</strong> Higher timing uncertainty
+<strong>Cons:</strong> Higher timing uncertainty
                 </div>
-              </div>
-              <div class="bg-white p-6 rounded-lg border border-gray-200">
-                <h4 class="font-semibold mb-3 text-accent">Hybrid Approach</h4>
-                <p class="text-sm text-secondary mb-3">AGT for core governance, custom implementation for clinical-specific requirements.</p>
-                <div class="text-xs text-muted">
-                  <strong>Pros:</strong> Balanced investment and capability
+</div>
+<div class="bg-white p-6 rounded-lg border border-gray-200">
+<h4 class="font-semibold mb-3 text-accent">Hybrid Approach</h4>
+<p class="text-sm text-secondary mb-3">AGT for core governance, custom implementation for clinical-specific requirements.</p>
+<div class="text-xs text-muted">
+<strong>Pros:</strong> Balanced investment and capability
                   <br/>
-                  <strong>Cons:</strong> Integration complexity
+<strong>Cons:</strong> Integration complexity
                 </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Enterprise Track -->
-      <section id="enterprise-track" class="py-16 px-8 bg-white">
-        <div class="max-w-6xl mx-auto">
-          <h2 class="font-serif text-3xl font-bold mb-8 text-primary">General Enterprise Track: Assessment</h2>
-
-          <div class="mb-12">
-            <img src="https://kimi-web-img.moonshot.cn/img/documents.trendmicro.com/81d27cda0ea6271d02890d16b9591d29e9b02ebb.png" alt="Enterprise AI agent governance security framework" class="rounded-lg shadow-lg w-full max-w-4xl mx-auto" size="large" aspect="wide" query="enterprise AI agent governance" referrerpolicy="no-referrer" data-modified="1" data-score="0.00"/>
-          </div>
-
-          <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
-            <div class="bg-gray-50 p-6 rounded-lg">
-              <h3 class="font-semibold mb-4 text-accent">Enterprise Governance Requirements</h3>
-              <div class="space-y-4">
-                <div>
-                  <h4 class="font-medium text-sm mb-2">Multi-Agent Coordination</h4>
-                  <p class="text-xs text-secondary">Conflict resolution, deadlock prevention, fair resource allocation through Agent Mesh with IATP protocol and trust scoring.</p>
-                </div>
-                <div>
-                  <h4 class="font-medium text-sm mb-2">Tool Governance at Scale</h4>
-                  <p class="text-xs text-secondary">Hundreds of diverse APIs, databases, services with consistent access control via multi-language policy engine.</p>
-                </div>
-                <div>
-                  <h4 class="font-medium text-sm mb-2">Memory/Context Governance</h4>
-                  <p class="text-xs text-secondary">Sensitive data persistence, cross-session leakage prevention, appropriate retrieval with policy-controlled access.</p>
-                </div>
-                <div>
-                  <h4 class="font-medium text-sm mb-2">Delegation and Spawning</h4>
-                  <p class="text-xs text-secondary">Transitive trust, authority propagation, cascade control with reputation-gated delegation.</p>
-                </div>
-              </div>
-            </div>
-
-            <div class="bg-gray-50 p-6 rounded-lg">
-              <h3 class="font-semibold mb-4 text-accent">AGT Enterprise Deployment Patterns</h3>
-              <div class="space-y-4">
-                <div>
-                  <h4 class="font-medium text-sm mb-2">Sidecar Proxy</h4>
-                  <p class="text-xs text-secondary mb-2">Language-agnostic, transparent, independent scaling with minimal code change.</p>
-                  <div class="text-xs text-muted">Considerations: IPC overhead, operational complexity</div>
-                </div>
-                <div>
-                  <h4 class="font-medium text-sm mb-2">Library/SDK Integration</h4>
-                  <p class="text-xs text-secondary mb-2">Minimal latency, rich context access, deep framework integration.</p>
-                  <div class="text-xs text-muted">Considerations: Language-specific, code modification required</div>
-                </div>
-                <div>
-                  <h4 class="font-medium text-sm mb-2">Kubernetes Operator</h4>
-                  <p class="text-xs text-secondary mb-2">Declarative management, cluster-wide policy, GitOps compatibility.</p>
-                  <div class="text-xs text-muted">Considerations: Kubernetes dependency, CRD learning curve</div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="prose max-w-none">
-            <h3 class="font-serif text-xl font-semibold mb-4">Infrastructure Integration Strategy</h3>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div class="bg-white border border-gray-200 rounded-lg p-6">
-                <h4 class="font-semibold mb-3 text-accent">Identity &amp; Security Systems</h4>
-                <ul class="space-y-2 text-sm text-secondary">
-                  <li>• SPIFFE/SPIRE federation with SVID issuance for unified identity</li>
-                  <li>• SIEM/SOAR integration with audit export and alert generation</li>
-                  <li>• Existing policy store integration (OPA, Cedar)</li>
-                  <li>• Cloud platform native identity integration</li>
-                </ul>
-              </div>
-              <div class="bg-white border border-gray-200 rounded-lg p-6">
-                <h4 class="font-semibold mb-3 text-accent">Operational Excellence</h4>
-                <ul class="space-y-2 text-sm text-secondary">
-                  <li>• Prometheus/OpenTelemetry for unified observability</li>
-                  <li>• Automated compliance evidence collection</li>
-                  <li>• Chaos engineering for governance validation</li>
-                  <li>• GitOps workflow integration for policy management</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Comparative Analysis -->
-      <section id="comparative-analysis" class="py-16 px-8 bg-gray-50">
-        <div class="max-w-6xl mx-auto">
-          <h2 class="font-serif text-3xl font-bold mb-8 text-primary">Comparative Analysis</h2>
-
-          <div class="overflow-x-auto mb-12">
-            <table class="w-full bg-white rounded-lg shadow-sm">
-              <thead class="bg-gray-50">
-                <tr>
-                  <th class="px-6 py-4 text-left text-sm font-semibold text-primary">Feature</th>
-                  <th class="px-6 py-4 text-center text-sm font-semibold text-accent">Microsoft AGT</th>
-                  <th class="px-6 py-4 text-center text-sm font-semibold text-secondary">NVIDIA OpenShell</th>
-                  <th class="px-6 py-4 text-center text-sm font-semibold text-secondary">Galileo Agent Control</th>
-                  <th class="px-6 py-4 text-center text-sm font-semibold text-secondary">HumanLayer ACP</th>
-                </tr>
-              </thead>
-              <tbody class="divide-y divide-gray-200">
-                <tr>
-                  <td class="px-6 py-4 text-sm font-medium">Runtime Policy Enforcement</td>
-                  <td class="px-6 py-4 text-center text-green-600">✅ Sub-millisecond</td>
-                  <td class="px-6 py-4 text-center text-red-600">❌ Isolation only</td>
-                  <td class="px-6 py-4 text-center text-yellow-600">⚠️ Mitigation</td>
-                  <td class="px-6 py-4 text-center text-red-600">❌ Scheduling only</td>
-                </tr>
-                <tr class="bg-gray-50">
-                  <td class="px-6 py-4 text-sm font-medium">Agent Identity/Cryptography</td>
-                  <td class="px-6 py-4 text-center text-green-600">✅ DIDs, Ed25519</td>
-                  <td class="px-6 py-4 text-center text-red-600">❌ Container ID</td>
-                  <td class="px-6 py-4 text-center text-red-600">❌ Not documented</td>
-                  <td class="px-6 py-4 text-center text-red-600">❌ Not documented</td>
-                </tr>
-                <tr>
-                  <td class="px-6 py-4 text-sm font-medium">Dynamic Trust Scoring</td>
-                  <td class="px-6 py-4 text-center text-green-600">✅ 0-1000 scale</td>
-                  <td class="px-6 py-4 text-center text-red-600">❌ N/A</td>
-                  <td class="px-6 py-4 text-center text-red-600">❌ Not documented</td>
-                  <td class="px-6 py-4 text-center text-red-600">❌ N/A</td>
-                </tr>
-                <tr class="bg-gray-50">
-                  <td class="px-6 py-4 text-sm font-medium">Audit/Provenance</td>
-                  <td class="px-6 py-4 text-center text-green-600">✅ Merkle chains</td>
-                  <td class="px-6 py-4 text-center text-yellow-600">⚠️ Structured logs</td>
-                  <td class="px-6 py-4 text-center text-yellow-600">⚠️ Event logging</td>
-                  <td class="px-6 py-4 text-center text-yellow-600">⚠️ K8s events</td>
-                </tr>
-                <tr>
-                  <td class="px-6 py-4 text-sm font-medium">Healthcare Compliance</td>
-                  <td class="px-6 py-4 text-center text-green-600">✅ HIPAA, EU AI Act</td>
-                  <td class="px-6 py-4 text-center text-yellow-600">⚠️ HIPAA mentioned</td>
-                  <td class="px-6 py-4 text-center text-red-600">❌ Not documented</td>
-                  <td class="px-6 py-4 text-center text-red-600">❌ N/A</td>
-                </tr>
-                <tr class="bg-gray-50">
-                  <td class="px-6 py-4 text-sm font-medium">Production Maturity</td>
-                  <td class="px-6 py-4 text-center text-green-600">✅ Microsoft-backed</td>
-                  <td class="px-6 py-4 text-center text-yellow-600">⚠️ Recent release</td>
-                  <td class="px-6 py-4 text-center text-yellow-600">⚠️ Recent release</td>
-                  <td class="px-6 py-4 text-center text-yellow-600">⚠️ Alpha status</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-
-          <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            <div class="bg-white p-6 rounded-lg border border-gray-200">
-              <h3 class="font-semibold mb-4 text-accent">Maturity Assessment</h3>
-              <div class="space-y-4">
-                <div>
-                  <div class="flex justify-between mb-2">
-                    <span class="text-sm font-medium">Microsoft AGT</span>
-                    <span class="text-sm text-green-600">Production-ready</span>
-                  </div>
-                  <div class="w-full bg-gray-200 rounded-full h-2">
-                    <div class="bg-green-500 h-2 rounded-full" style="width: 95%"></div>
-                  </div>
-                </div>
-                <div>
-                  <div class="flex justify-between mb-2">
-                    <span class="text-sm font-medium">NVIDIA OpenShell</span>
-                    <span class="text-sm text-blue-600">Emerging</span>
-                  </div>
-                  <div class="w-full bg-gray-200 rounded-full h-2">
-                    <div class="bg-blue-500 h-2 rounded-full" style="width: 70%"></div>
-                  </div>
-                </div>
-                <div>
-                  <div class="flex justify-between mb-2">
-                    <span class="text-sm font-medium">Galileo Agent Control</span>
-                    <span class="text-sm text-yellow-600">Beta</span>
-                  </div>
-                  <div class="w-full bg-gray-200 rounded-full h-2">
-                    <div class="bg-yellow-500 h-2 rounded-full" style="width: 60%"></div>
-                  </div>
-                </div>
-                <div>
-                  <div class="flex justify-between mb-2">
-                    <span class="text-sm font-medium">HumanLayer ACP</span>
-                    <span class="text-sm text-orange-600">Alpha</span>
-                  </div>
-                  <div class="w-full bg-gray-200 rounded-full h-2">
-                    <div class="bg-orange-500 h-2 rounded-full" style="width: 40%"></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="bg-white p-6 rounded-lg border border-gray-200">
-              <h3 class="font-semibold mb-4 text-accent">Licensing &amp; Vendor Neutrality</h3>
-              <div class="space-y-4">
-                <div class="flex justify-between items-center">
-                  <span class="text-sm font-medium">Microsoft AGT</span>
-                  <div class="text-right">
-                    <div class="text-xs text-muted">MIT License</div>
-                    <div class="text-xs text-green-600">Foundation aspiration</div>
-                  </div>
-                </div>
-                <div class="flex justify-between items-center">
-                  <span class="text-sm font-medium">NVIDIA OpenShell</span>
-                  <div class="text-right">
-                    <div class="text-xs text-muted">Apache 2.0</div>
-                    <div class="text-xs text-blue-600">Framework-agnostic</div>
-                  </div>
-                </div>
-                <div class="flex justify-between items-center">
-                  <span class="text-sm font-medium">Galileo Agent Control</span>
-                  <div class="text-right">
-                    <div class="text-xs text-muted">Apache 2.0</div>
-                    <div class="text-xs text-yellow-600">Commercial integration</div>
-                  </div>
-                </div>
-                <div class="flex justify-between items-center">
-                  <span class="text-sm font-medium">HumanLayer ACP</span>
-                  <div class="text-right">
-                    <div class="text-xs text-muted">Apache 2.0</div>
-                    <div class="text-xs text-orange-600">Independent</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Gap Analysis -->
-      <section id="gap-analysis" class="py-16 px-8 bg-white">
-        <div class="max-w-6xl mx-auto">
-          <h2 class="font-serif text-3xl font-bold mb-8 text-primary">Ecosystem Gap Analysis</h2>
-
-          <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
-            <div class="bg-red-50 border border-red-200 rounded-lg p-6">
-              <h3 class="font-semibold mb-4 text-red-800">Critical Missing Capabilities</h3>
-              <div class="space-y-4">
-                <div>
-                  <h4 class="font-medium text-sm mb-2">Healthcare-Native Runtime Governance</h4>
-                  <p class="text-xs text-secondary">Built-in clinical semantics, EHR integration, FDA-aligned controls. Impact: High implementation burden, regulatory uncertainty, safety risk.</p>
-                </div>
-                <div>
-                  <h4 class="font-medium text-sm mb-2">Cross-Framework Policy Portability</h4>
-                  <p class="text-xs text-secondary">Standard policy language, interchangeable enforcement. Impact: Policy fragmentation, vendor lock-in, compliance inconsistency.</p>
-                </div>
-                <div>
-                  <h4 class="font-medium text-sm mb-2">Standardized Agent Identity Federation</h4>
-                  <p class="text-xs text-secondary">Cross-organizational trust protocols beyond IATP. Impact: Multi-party collaboration friction, B2B governance complexity.</p>
-                </div>
-              </div>
-            </div>
-
-            <div class="bg-yellow-50 border border-yellow-200 rounded-lg p-6">
-              <h3 class="font-semibold mb-4 text-yellow-800">Standards &amp; Interoperability Gaps</h3>
-              <div class="space-y-4">
-                <div>
-                  <h4 class="font-medium text-sm mb-2">Agent-to-Agent Trust Protocols</h4>
-                  <p class="text-xs text-secondary">Current: IATP (AGT proprietary). Resolution: Foundation aspiration suggests standardization potential.</p>
-                </div>
-                <div>
-                  <h4 class="font-medium text-sm mb-2">Policy Language Standardization</h4>
-                  <p class="text-xs text-secondary">Current: YAML/Rego/Cedar pluralism. Resolution: OPA ecosystem momentum, no convergence yet.</p>
-                </div>
-                <div>
-                  <h4 class="font-medium text-sm mb-2">Audit Format Interoperability</h4>
-                  <p class="text-xs text-secondary">Current: Merkle chains (AGT), structured logs (others). Resolution: No standardization activity identified.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="mb-12">
-            <h3 class="font-serif text-xl font-semibold mb-6">Fragmentation Across Domains</h3>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-              <div class="bg-gray-50 p-4 rounded-lg text-center">
-                <i class="fas fa-sitemap text-2xl text-blue-600 mb-3"></i>
-                <h4 class="font-semibold text-sm mb-2">Orchestration</h4>
-                <p class="text-xs text-secondary">Mature frameworks with governance hooks</p>
-                <div class="text-xs text-green-600 mt-2">AGT integrations provide unified layer</div>
-              </div>
-              <div class="bg-gray-50 p-4 rounded-lg text-center">
-                <i class="fas fa-shield-alt text-2xl text-green-600 mb-3"></i>
-                <h4 class="font-semibold text-sm mb-2">Security</h4>
-                <p class="text-xs text-secondary">Runtime isolation + general policy</p>
-                <div class="text-xs text-blue-600 mt-2">AGT + OpenShell defense-in-depth</div>
-              </div>
-              <div class="bg-gray-50 p-4 rounded-lg text-center">
-                <i class="fas fa-chart-line text-2xl text-yellow-600 mb-3"></i>
-                <h4 class="font-semibold text-sm mb-2">Observability</h4>
-                <p class="text-xs text-secondary">Tracing, monitoring, ML observability</p>
-                <div class="text-xs text-purple-600 mt-2">AGT audit export + complementary monitoring</div>
-              </div>
-              <div class="bg-gray-50 p-4 rounded-lg text-center">
-                <i class="fas fa-clipboard-check text-2xl text-red-600 mb-3"></i>
-                <h4 class="font-semibold text-sm mb-2">Compliance</h4>
-                <p class="text-xs text-secondary">Documentation, mapping, assessment</p>
-                <div class="text-xs text-orange-600 mt-2">AGT evidence + organizational process</div>
-              </div>
-            </div>
-          </div>
-
-          <div class="bg-blue-50 border border-blue-200 rounded-lg p-6">
-            <h3 class="font-semibold mb-4 text-blue-800">Integration Patterns Ecosystem</h3>
-            <div class="flex justify-center">
-              <div class="mermaid-container">
-                <div class="mermaid-controls">
-                  <button class="mermaid-control-btn zoom-in" title="放大">
-                    <i class="fas fa-search-plus"></i>
-                  </button>
-                  <button class="mermaid-control-btn zoom-out" title="缩小">
-                    <i class="fas fa-search-minus"></i>
-                  </button>
-                  <button class="mermaid-control-btn reset-zoom" title="重置">
-                    <i class="fas fa-expand-arrows-alt"></i>
-                  </button>
-                  <button class="mermaid-control-btn fullscreen" title="全屏查看">
-                    <i class="fas fa-expand"></i>
-                  </button>
-                </div>
-                <div class="mermaid" id="integration-pattern-diagram">
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Enterprise Track -->
+<section class="py-16 px-8 bg-white" id="enterprise-track">
+<div class="max-w-6xl mx-auto">
+<h2 class="font-serif text-3xl font-bold mb-8 text-primary">General Enterprise Track: Assessment</h2>
+<div class="mb-12">
+<img alt="Enterprise AI agent governance security framework" aspect="wide" class="rounded-lg shadow-lg w-full max-w-4xl mx-auto" data-modified="1" data-score="0.00" query="enterprise AI agent governance" referrerpolicy="no-referrer" size="large" src="img/8901cc0ae9.png"/>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+<div class="bg-gray-50 p-6 rounded-lg">
+<h3 class="font-semibold mb-4 text-accent">Enterprise Governance Requirements</h3>
+<div class="space-y-4">
+<div>
+<h4 class="font-medium text-sm mb-2">Multi-Agent Coordination</h4>
+<p class="text-xs text-secondary">Conflict resolution, deadlock prevention, fair resource allocation through Agent Mesh with IATP protocol and trust scoring.</p>
+</div>
+<div>
+<h4 class="font-medium text-sm mb-2">Tool Governance at Scale</h4>
+<p class="text-xs text-secondary">Hundreds of diverse APIs, databases, services with consistent access control via multi-language policy engine.</p>
+</div>
+<div>
+<h4 class="font-medium text-sm mb-2">Memory/Context Governance</h4>
+<p class="text-xs text-secondary">Sensitive data persistence, cross-session leakage prevention, appropriate retrieval with policy-controlled access.</p>
+</div>
+<div>
+<h4 class="font-medium text-sm mb-2">Delegation and Spawning</h4>
+<p class="text-xs text-secondary">Transitive trust, authority propagation, cascade control with reputation-gated delegation.</p>
+</div>
+</div>
+</div>
+<div class="bg-gray-50 p-6 rounded-lg">
+<h3 class="font-semibold mb-4 text-accent">AGT Enterprise Deployment Patterns</h3>
+<div class="space-y-4">
+<div>
+<h4 class="font-medium text-sm mb-2">Sidecar Proxy</h4>
+<p class="text-xs text-secondary mb-2">Language-agnostic, transparent, independent scaling with minimal code change.</p>
+<div class="text-xs text-muted">Considerations: IPC overhead, operational complexity</div>
+</div>
+<div>
+<h4 class="font-medium text-sm mb-2">Library/SDK Integration</h4>
+<p class="text-xs text-secondary mb-2">Minimal latency, rich context access, deep framework integration.</p>
+<div class="text-xs text-muted">Considerations: Language-specific, code modification required</div>
+</div>
+<div>
+<h4 class="font-medium text-sm mb-2">Kubernetes Operator</h4>
+<p class="text-xs text-secondary mb-2">Declarative management, cluster-wide policy, GitOps compatibility.</p>
+<div class="text-xs text-muted">Considerations: Kubernetes dependency, CRD learning curve</div>
+</div>
+</div>
+</div>
+</div>
+<div class="prose max-w-none">
+<h3 class="font-serif text-xl font-semibold mb-4">Infrastructure Integration Strategy</h3>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="bg-white border border-gray-200 rounded-lg p-6">
+<h4 class="font-semibold mb-3 text-accent">Identity &amp; Security Systems</h4>
+<ul class="space-y-2 text-sm text-secondary">
+<li>• SPIFFE/SPIRE federation with SVID issuance for unified identity</li>
+<li>• SIEM/SOAR integration with audit export and alert generation</li>
+<li>• Existing policy store integration (OPA, Cedar)</li>
+<li>• Cloud platform native identity integration</li>
+</ul>
+</div>
+<div class="bg-white border border-gray-200 rounded-lg p-6">
+<h4 class="font-semibold mb-3 text-accent">Operational Excellence</h4>
+<ul class="space-y-2 text-sm text-secondary">
+<li>• Prometheus/OpenTelemetry for unified observability</li>
+<li>• Automated compliance evidence collection</li>
+<li>• Chaos engineering for governance validation</li>
+<li>• GitOps workflow integration for policy management</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Comparative Analysis -->
+<section class="py-16 px-8 bg-gray-50" id="comparative-analysis">
+<div class="max-w-6xl mx-auto">
+<h2 class="font-serif text-3xl font-bold mb-8 text-primary">Comparative Analysis</h2>
+<div class="overflow-x-auto mb-12">
+<table class="w-full bg-white rounded-lg shadow-sm">
+<thead class="bg-gray-50">
+<tr>
+<th class="px-6 py-4 text-left text-sm font-semibold text-primary">Feature</th>
+<th class="px-6 py-4 text-center text-sm font-semibold text-accent">Microsoft AGT</th>
+<th class="px-6 py-4 text-center text-sm font-semibold text-secondary">NVIDIA OpenShell</th>
+<th class="px-6 py-4 text-center text-sm font-semibold text-secondary">Galileo Agent Control</th>
+<th class="px-6 py-4 text-center text-sm font-semibold text-secondary">HumanLayer ACP</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-gray-200">
+<tr>
+<td class="px-6 py-4 text-sm font-medium">Runtime Policy Enforcement</td>
+<td class="px-6 py-4 text-center text-green-600">✅ Sub-millisecond</td>
+<td class="px-6 py-4 text-center text-red-600">❌ Isolation only</td>
+<td class="px-6 py-4 text-center text-yellow-600">⚠️ Mitigation</td>
+<td class="px-6 py-4 text-center text-red-600">❌ Scheduling only</td>
+</tr>
+<tr class="bg-gray-50">
+<td class="px-6 py-4 text-sm font-medium">Agent Identity/Cryptography</td>
+<td class="px-6 py-4 text-center text-green-600">✅ DIDs, Ed25519</td>
+<td class="px-6 py-4 text-center text-red-600">❌ Container ID</td>
+<td class="px-6 py-4 text-center text-red-600">❌ Not documented</td>
+<td class="px-6 py-4 text-center text-red-600">❌ Not documented</td>
+</tr>
+<tr>
+<td class="px-6 py-4 text-sm font-medium">Dynamic Trust Scoring</td>
+<td class="px-6 py-4 text-center text-green-600">✅ 0-1000 scale</td>
+<td class="px-6 py-4 text-center text-red-600">❌ N/A</td>
+<td class="px-6 py-4 text-center text-red-600">❌ Not documented</td>
+<td class="px-6 py-4 text-center text-red-600">❌ N/A</td>
+</tr>
+<tr class="bg-gray-50">
+<td class="px-6 py-4 text-sm font-medium">Audit/Provenance</td>
+<td class="px-6 py-4 text-center text-green-600">✅ Merkle chains</td>
+<td class="px-6 py-4 text-center text-yellow-600">⚠️ Structured logs</td>
+<td class="px-6 py-4 text-center text-yellow-600">⚠️ Event logging</td>
+<td class="px-6 py-4 text-center text-yellow-600">⚠️ K8s events</td>
+</tr>
+<tr>
+<td class="px-6 py-4 text-sm font-medium">Healthcare Compliance</td>
+<td class="px-6 py-4 text-center text-green-600">✅ HIPAA, EU AI Act</td>
+<td class="px-6 py-4 text-center text-yellow-600">⚠️ HIPAA mentioned</td>
+<td class="px-6 py-4 text-center text-red-600">❌ Not documented</td>
+<td class="px-6 py-4 text-center text-red-600">❌ N/A</td>
+</tr>
+<tr class="bg-gray-50">
+<td class="px-6 py-4 text-sm font-medium">Production Maturity</td>
+<td class="px-6 py-4 text-center text-green-600">✅ Microsoft-backed</td>
+<td class="px-6 py-4 text-center text-yellow-600">⚠️ Recent release</td>
+<td class="px-6 py-4 text-center text-yellow-600">⚠️ Recent release</td>
+<td class="px-6 py-4 text-center text-yellow-600">⚠️ Alpha status</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+<div class="bg-white p-6 rounded-lg border border-gray-200">
+<h3 class="font-semibold mb-4 text-accent">Maturity Assessment</h3>
+<div class="space-y-4">
+<div>
+<div class="flex justify-between mb-2">
+<span class="text-sm font-medium">Microsoft AGT</span>
+<span class="text-sm text-green-600">Production-ready</span>
+</div>
+<div class="w-full bg-gray-200 rounded-full h-2">
+<div class="bg-green-500 h-2 rounded-full" style="width: 95%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between mb-2">
+<span class="text-sm font-medium">NVIDIA OpenShell</span>
+<span class="text-sm text-blue-600">Emerging</span>
+</div>
+<div class="w-full bg-gray-200 rounded-full h-2">
+<div class="bg-blue-500 h-2 rounded-full" style="width: 70%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between mb-2">
+<span class="text-sm font-medium">Galileo Agent Control</span>
+<span class="text-sm text-yellow-600">Beta</span>
+</div>
+<div class="w-full bg-gray-200 rounded-full h-2">
+<div class="bg-yellow-500 h-2 rounded-full" style="width: 60%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between mb-2">
+<span class="text-sm font-medium">HumanLayer ACP</span>
+<span class="text-sm text-orange-600">Alpha</span>
+</div>
+<div class="w-full bg-gray-200 rounded-full h-2">
+<div class="bg-orange-500 h-2 rounded-full" style="width: 40%"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-white p-6 rounded-lg border border-gray-200">
+<h3 class="font-semibold mb-4 text-accent">Licensing &amp; Vendor Neutrality</h3>
+<div class="space-y-4">
+<div class="flex justify-between items-center">
+<span class="text-sm font-medium">Microsoft AGT</span>
+<div class="text-right">
+<div class="text-xs text-muted">MIT License</div>
+<div class="text-xs text-green-600">Foundation aspiration</div>
+</div>
+</div>
+<div class="flex justify-between items-center">
+<span class="text-sm font-medium">NVIDIA OpenShell</span>
+<div class="text-right">
+<div class="text-xs text-muted">Apache 2.0</div>
+<div class="text-xs text-blue-600">Framework-agnostic</div>
+</div>
+</div>
+<div class="flex justify-between items-center">
+<span class="text-sm font-medium">Galileo Agent Control</span>
+<div class="text-right">
+<div class="text-xs text-muted">Apache 2.0</div>
+<div class="text-xs text-yellow-600">Commercial integration</div>
+</div>
+</div>
+<div class="flex justify-between items-center">
+<span class="text-sm font-medium">HumanLayer ACP</span>
+<div class="text-right">
+<div class="text-xs text-muted">Apache 2.0</div>
+<div class="text-xs text-orange-600">Independent</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Gap Analysis -->
+<section class="py-16 px-8 bg-white" id="gap-analysis">
+<div class="max-w-6xl mx-auto">
+<h2 class="font-serif text-3xl font-bold mb-8 text-primary">Ecosystem Gap Analysis</h2>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+<div class="bg-red-50 border border-red-200 rounded-lg p-6">
+<h3 class="font-semibold mb-4 text-red-800">Critical Missing Capabilities</h3>
+<div class="space-y-4">
+<div>
+<h4 class="font-medium text-sm mb-2">Healthcare-Native Runtime Governance</h4>
+<p class="text-xs text-secondary">Built-in clinical semantics, EHR integration, FDA-aligned controls. Impact: High implementation burden, regulatory uncertainty, safety risk.</p>
+</div>
+<div>
+<h4 class="font-medium text-sm mb-2">Cross-Framework Policy Portability</h4>
+<p class="text-xs text-secondary">Standard policy language, interchangeable enforcement. Impact: Policy fragmentation, vendor lock-in, compliance inconsistency.</p>
+</div>
+<div>
+<h4 class="font-medium text-sm mb-2">Standardized Agent Identity Federation</h4>
+<p class="text-xs text-secondary">Cross-organizational trust protocols beyond IATP. Impact: Multi-party collaboration friction, B2B governance complexity.</p>
+</div>
+</div>
+</div>
+<div class="bg-yellow-50 border border-yellow-200 rounded-lg p-6">
+<h3 class="font-semibold mb-4 text-yellow-800">Standards &amp; Interoperability Gaps</h3>
+<div class="space-y-4">
+<div>
+<h4 class="font-medium text-sm mb-2">Agent-to-Agent Trust Protocols</h4>
+<p class="text-xs text-secondary">Current: IATP (AGT proprietary). Resolution: Foundation aspiration suggests standardization potential.</p>
+</div>
+<div>
+<h4 class="font-medium text-sm mb-2">Policy Language Standardization</h4>
+<p class="text-xs text-secondary">Current: YAML/Rego/Cedar pluralism. Resolution: OPA ecosystem momentum, no convergence yet.</p>
+</div>
+<div>
+<h4 class="font-medium text-sm mb-2">Audit Format Interoperability</h4>
+<p class="text-xs text-secondary">Current: Merkle chains (AGT), structured logs (others). Resolution: No standardization activity identified.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="mb-12">
+<h3 class="font-serif text-xl font-semibold mb-6">Fragmentation Across Domains</h3>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+<div class="bg-gray-50 p-4 rounded-lg text-center">
+<i class="fas fa-sitemap text-2xl text-blue-600 mb-3"></i>
+<h4 class="font-semibold text-sm mb-2">Orchestration</h4>
+<p class="text-xs text-secondary">Mature frameworks with governance hooks</p>
+<div class="text-xs text-green-600 mt-2">AGT integrations provide unified layer</div>
+</div>
+<div class="bg-gray-50 p-4 rounded-lg text-center">
+<i class="fas fa-shield-alt text-2xl text-green-600 mb-3"></i>
+<h4 class="font-semibold text-sm mb-2">Security</h4>
+<p class="text-xs text-secondary">Runtime isolation + general policy</p>
+<div class="text-xs text-blue-600 mt-2">AGT + OpenShell defense-in-depth</div>
+</div>
+<div class="bg-gray-50 p-4 rounded-lg text-center">
+<i class="fas fa-chart-line text-2xl text-yellow-600 mb-3"></i>
+<h4 class="font-semibold text-sm mb-2">Observability</h4>
+<p class="text-xs text-secondary">Tracing, monitoring, ML observability</p>
+<div class="text-xs text-purple-600 mt-2">AGT audit export + complementary monitoring</div>
+</div>
+<div class="bg-gray-50 p-4 rounded-lg text-center">
+<i class="fas fa-clipboard-check text-2xl text-red-600 mb-3"></i>
+<h4 class="font-semibold text-sm mb-2">Compliance</h4>
+<p class="text-xs text-secondary">Documentation, mapping, assessment</p>
+<div class="text-xs text-orange-600 mt-2">AGT evidence + organizational process</div>
+</div>
+</div>
+</div>
+<div class="bg-blue-50 border border-blue-200 rounded-lg p-6">
+<h3 class="font-semibold mb-4 text-blue-800">Integration Patterns Ecosystem</h3>
+<div class="flex justify-center">
+<div class="mermaid-container">
+<div class="mermaid-controls">
+<button class="mermaid-control-btn zoom-in" title="放大">
+<i class="fas fa-search-plus"></i>
+</button>
+<button class="mermaid-control-btn zoom-out" title="缩小">
+<i class="fas fa-search-minus"></i>
+</button>
+<button class="mermaid-control-btn reset-zoom" title="重置">
+<i class="fas fa-expand-arrows-alt"></i>
+</button>
+<button class="mermaid-control-btn fullscreen" title="全屏查看">
+<i class="fas fa-expand"></i>
+</button>
+</div>
+<div class="mermaid" id="integration-pattern-diagram">
                   graph TD
-                  A[&#34;Agent Frameworks
-                  <br/>LangChain, AutoGen, CrewAI&#34;] --&gt; C[&#34;AGT Governance Layer
-                  <br/>Policy Enforcement + Identity&#34;]
-                  B[&#34;Security Tools
-                  <br/>NVIDIA OpenShell, OPA&#34;] --&gt; C
-                  C --&gt; D[&#34;Observability Platforms
-                  <br/>LangSmith, AgentOps&#34;]
-                  C --&gt; E[&#34;Compliance Systems
-                  <br/>HAARF, Documentation&#34;]
-                  D --&gt; F[&#34;Enterprise Governance
-                  <br/>Complete Solution&#34;]
+                  A["Agent Frameworks
+                  <br/>LangChain, AutoGen, CrewAI"] --&gt; C["AGT Governance Layer
+                  <br/>Policy Enforcement + Identity"]
+                  B["Security Tools
+                  <br/>NVIDIA OpenShell, OPA"] --&gt; C
+                  C --&gt; D["Observability Platforms
+                  <br/>LangSmith, AgentOps"]
+                  C --&gt; E["Compliance Systems
+                  <br/>HAARF, Documentation"]
+                  D --&gt; F["Enterprise Governance
+                  <br/>Complete Solution"]
                   E --&gt; F
-                  C -.-&gt; G[&#34;Healthcare Gap
-                  <br/>No Native Runtime&#34;]
-                  G -.-&gt; H[&#34;Adaptation Required&#34;]
+                  C -.-&gt; G["Healthcare Gap
+                  <br/>No Native Runtime"]
+                  G -.-&gt; H["Adaptation Required"]
                 </div>
-              </div>
-            </div>
-            <p class="text-sm text-secondary mt-4">
+</div>
+</div>
+<p class="text-sm text-secondary mt-4">
               The pre-2026 fragmentation is resolving in the general enterprise domain through AGT convergence, while healthcare fragmentation persists due to specialized requirements without dedicated implementation. This pattern shows how AGT serves as the central governance intelligence layer, integrating with various complementary components while the healthcare gap remains unaddressed by native solutions.
             </p>
-          </div>
-        </div>
-      </section>
-
-      <!-- Recommendations -->
-      <section id="recommendations" class="py-16 px-8 bg-gray-50">
-        <div class="max-w-6xl mx-auto">
-          <h2 class="font-serif text-3xl font-bold mb-8 text-primary">Strategic Recommendations</h2>
-
-          <div class="mb-12">
-            <div class="mermaid-container">
-              <div class="mermaid-controls">
-                <button class="mermaid-control-btn zoom-in" title="放大">
-                  <i class="fas fa-search-plus"></i>
-                </button>
-                <button class="mermaid-control-btn zoom-out" title="缩小">
-                  <i class="fas fa-search-minus"></i>
-                </button>
-                <button class="mermaid-control-btn reset-zoom" title="重置">
-                  <i class="fas fa-expand-arrows-alt"></i>
-                </button>
-                <button class="mermaid-control-btn fullscreen" title="全屏查看">
-                  <i class="fas fa-expand"></i>
-                </button>
-              </div>
-              <div class="mermaid" id="recommendations-flowchart">
+</div>
+</div>
+</section>
+<!-- Recommendations -->
+<section class="py-16 px-8 bg-gray-50" id="recommendations">
+<div class="max-w-6xl mx-auto">
+<h2 class="font-serif text-3xl font-bold mb-8 text-primary">Strategic Recommendations</h2>
+<div class="mb-12">
+<div class="mermaid-container">
+<div class="mermaid-controls">
+<button class="mermaid-control-btn zoom-in" title="放大">
+<i class="fas fa-search-plus"></i>
+</button>
+<button class="mermaid-control-btn zoom-out" title="缩小">
+<i class="fas fa-search-minus"></i>
+</button>
+<button class="mermaid-control-btn reset-zoom" title="重置">
+<i class="fas fa-expand-arrows-alt"></i>
+</button>
+<button class="mermaid-control-btn fullscreen" title="全屏查看">
+<i class="fas fa-expand"></i>
+</button>
+</div>
+<div class="mermaid" id="recommendations-flowchart">
                 graph TD
-                A[&#34;Current State: Fragmented Ecosystem&#34;] --&gt; B{&#34;Organization Type&#34;}
+                A["Current State: Fragmented Ecosystem"] --&gt; B{"Organization Type"}
 
-                B --&gt;|&#34;Healthcare&#34;| C[&#34;Healthcare Organizations&#34;]
-                B --&gt;|&#34;Enterprise&#34;| D[&#34;General Enterprise&#34;]
-                B --&gt;|&#34;Standards Body&#34;| E[&#34;Standards Bodies &amp; Regulators&#34;]
+                B --&gt;|"Healthcare"| C["Healthcare Organizations"]
+                B --&gt;|"Enterprise"| D["General Enterprise"]
+                B --&gt;|"Standards Body"| E["Standards Bodies &amp; Regulators"]
 
-                C --&gt; C1[&#34;Immediate: Evaluate AGT
-                <br/>Q2-Q3 2026&#34;]
-                C --&gt; C2[&#34;Near-term: AGT + OpenShell
-                <br/>Q3-Q4 2026&#34;]
-                C --&gt; C3[&#34;Medium-term: Specialization
-                <br/>2027+&#34;]
-                C --&gt; C4[&#34;Risk Mitigation: Conservative Deployment&#34;]
+                C --&gt; C1["Immediate: Evaluate AGT
+                <br/>Q2-Q3 2026"]
+                C --&gt; C2["Near-term: AGT + OpenShell
+                <br/>Q3-Q4 2026"]
+                C --&gt; C3["Medium-term: Specialization
+                <br/>2027+"]
+                C --&gt; C4["Risk Mitigation: Conservative Deployment"]
 
-                D --&gt; D1[&#34;Immediate: Adopt AGT
-                <br/>90-day capability&#34;]
-                D --&gt; D2[&#34;Near-term: Defense-in-Depth
-                <br/>+ OpenShell&#34;]
-                D --&gt; D3[&#34;Medium-term: Community Contribution
-                <br/>Foundation influence&#34;]
-                D --&gt; D4[&#34;Optimization: Automation &amp; Validation&#34;]
+                D --&gt; D1["Immediate: Adopt AGT
+                <br/>90-day capability"]
+                D --&gt; D2["Near-term: Defense-in-Depth
+                <br/>+ OpenShell"]
+                D --&gt; D3["Medium-term: Community Contribution
+                <br/>Foundation influence"]
+                D --&gt; D4["Optimization: Automation &amp; Validation"]
 
-                E --&gt; E1[&#34;AGT Foundation Transition
-                <br/>Vendor-neutral standard&#34;]
-                E --&gt; E2[&#34;Healthcare Specialization
-                <br/>Clinical requirements&#34;]
-                E --&gt; E3[&#34;Identity Federation Standards
-                <br/>Cross-organizational trust&#34;]
-                E --&gt; E4[&#34;Policy Language Convergence
-                <br/>Interchange standards&#34;]
+                E --&gt; E1["AGT Foundation Transition
+                <br/>Vendor-neutral standard"]
+                E --&gt; E2["Healthcare Specialization
+                <br/>Clinical requirements"]
+                E --&gt; E3["Identity Federation Standards
+                <br/>Cross-organizational trust"]
+                E --&gt; E4["Policy Language Convergence
+                <br/>Interchange standards"]
 
-                C1 --&gt; F[&#34;Production Governance Capability&#34;]
+                C1 --&gt; F["Production Governance Capability"]
                 C2 --&gt; F
                 C3 --&gt; F
                 C4 --&gt; F
@@ -1166,84 +1119,79 @@
                 E3 --&gt; F
                 E4 --&gt; F
               </div>
-            </div>
-          </div>
-
-          <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
-            <div class="bg-white p-6 rounded-lg border-l-4 border-red-500">
-              <h3 class="font-semibold mb-4 text-red-700">For Healthcare Organizations</h3>
-              <div class="space-y-4">
-                <div>
-                  <h4 class="font-medium text-sm mb-2">Immediate (Q2-Q3 2026)</h4>
-                  <p class="text-xs text-secondary">Evaluate AGT for foundational governance capability; assess adaptation requirements for clinical context.</p>
-                </div>
-                <div>
-                  <h4 class="font-medium text-sm mb-2">Near-term (Q3-Q4 2026)</h4>
-                  <p class="text-xs text-secondary">Implement AGT + OpenShell defense-in-depth; develop healthcare-specific policy libraries.</p>
-                </div>
-                <div>
-                  <h4 class="font-medium text-sm mb-2">Medium-term (2027+)</h4>
-                  <p class="text-xs text-secondary">Contribute to AGT healthcare specialization; evaluate emerging healthcare-native alternatives.</p>
-                </div>
-              </div>
-            </div>
-
-            <div class="bg-white p-6 rounded-lg border-l-4 border-blue-500">
-              <h3 class="font-semibold mb-4 text-blue-700">For General Enterprise</h3>
-              <div class="space-y-4">
-                <div>
-                  <h4 class="font-medium text-sm mb-2">Immediate</h4>
-                  <p class="text-xs text-secondary">Adopt AGT as primary governance layer; integrate with existing security infrastructure.</p>
-                </div>
-                <div>
-                  <h4 class="font-medium text-sm mb-2">Near-term</h4>
-                  <p class="text-xs text-secondary">Implement OpenShell complementary isolation; expand framework coverage.</p>
-                </div>
-                <div>
-                  <h4 class="font-medium text-sm mb-2">Medium-term</h4>
-                  <p class="text-xs text-secondary">Contribute to AGT community; prepare for foundation governance transition.</p>
-                </div>
-              </div>
-            </div>
-
-            <div class="bg-white p-6 rounded-lg border-l-4 border-green-500">
-              <h3 class="font-semibold mb-4 text-green-700">For Standards Bodies</h3>
-              <div class="space-y-4">
-                <div>
-                  <h4 class="font-medium text-sm mb-2">Ecosystem Development</h4>
-                  <p class="text-xs text-secondary">Facilitate AGT foundation transition for vendor-neutral governance standard.</p>
-                </div>
-                <div>
-                  <h4 class="font-medium text-sm mb-2">Healthcare Specialization</h4>
-                  <p class="text-xs text-secondary">Develop clinical AI governance requirements and validation frameworks.</p>
-                </div>
-                <div>
-                  <h4 class="font-medium text-sm mb-2">Standards Development</h4>
-                  <p class="text-xs text-secondary">Standardize agent identity federation and policy language convergence.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="bg-blue-50 border border-blue-200 rounded-lg p-6">
-            <h3 class="font-semibold mb-4 text-blue-800">Conclusion: Existence of True Governance Layer</h3>
-            <div class="prose max-w-none">
-              <p class="text-secondary leading-relaxed mb-4">
-                <strong>A true governance layer for AI-first agentic enterprises now exists in open-source form.</strong> The Microsoft Agent Governance Toolkit demonstrates that runtime policy enforcement at production scale is technically feasible, deterministic sub-millisecond governance is achievable, cryptographic audit integrity can satisfy regulatory requirements, and vendor-neutral multi-framework integration is implementable.
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
+<div class="bg-white p-6 rounded-lg border-l-4 border-red-500">
+<h3 class="font-semibold mb-4 text-red-700">For Healthcare Organizations</h3>
+<div class="space-y-4">
+<div>
+<h4 class="font-medium text-sm mb-2">Immediate (Q2-Q3 2026)</h4>
+<p class="text-xs text-secondary">Evaluate AGT for foundational governance capability; assess adaptation requirements for clinical context.</p>
+</div>
+<div>
+<h4 class="font-medium text-sm mb-2">Near-term (Q3-Q4 2026)</h4>
+<p class="text-xs text-secondary">Implement AGT + OpenShell defense-in-depth; develop healthcare-specific policy libraries.</p>
+</div>
+<div>
+<h4 class="font-medium text-sm mb-2">Medium-term (2027+)</h4>
+<p class="text-xs text-secondary">Contribute to AGT healthcare specialization; evaluate emerging healthcare-native alternatives.</p>
+</div>
+</div>
+</div>
+<div class="bg-white p-6 rounded-lg border-l-4 border-blue-500">
+<h3 class="font-semibold mb-4 text-blue-700">For General Enterprise</h3>
+<div class="space-y-4">
+<div>
+<h4 class="font-medium text-sm mb-2">Immediate</h4>
+<p class="text-xs text-secondary">Adopt AGT as primary governance layer; integrate with existing security infrastructure.</p>
+</div>
+<div>
+<h4 class="font-medium text-sm mb-2">Near-term</h4>
+<p class="text-xs text-secondary">Implement OpenShell complementary isolation; expand framework coverage.</p>
+</div>
+<div>
+<h4 class="font-medium text-sm mb-2">Medium-term</h4>
+<p class="text-xs text-secondary">Contribute to AGT community; prepare for foundation governance transition.</p>
+</div>
+</div>
+</div>
+<div class="bg-white p-6 rounded-lg border-l-4 border-green-500">
+<h3 class="font-semibold mb-4 text-green-700">For Standards Bodies</h3>
+<div class="space-y-4">
+<div>
+<h4 class="font-medium text-sm mb-2">Ecosystem Development</h4>
+<p class="text-xs text-secondary">Facilitate AGT foundation transition for vendor-neutral governance standard.</p>
+</div>
+<div>
+<h4 class="font-medium text-sm mb-2">Healthcare Specialization</h4>
+<p class="text-xs text-secondary">Develop clinical AI governance requirements and validation frameworks.</p>
+</div>
+<div>
+<h4 class="font-medium text-sm mb-2">Standards Development</h4>
+<p class="text-xs text-secondary">Standardize agent identity federation and policy language convergence.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-blue-50 border border-blue-200 rounded-lg p-6">
+<h3 class="font-semibold mb-4 text-blue-800">Conclusion: Existence of True Governance Layer</h3>
+<div class="prose max-w-none">
+<p class="text-secondary leading-relaxed mb-4">
+<strong>A true governance layer for AI-first agentic enterprises now exists in open-source form.</strong> The Microsoft Agent Governance Toolkit demonstrates that runtime policy enforcement at production scale is technically feasible, deterministic sub-millisecond governance is achievable, cryptographic audit integrity can satisfy regulatory requirements, and vendor-neutral multi-framework integration is implementable.
               </p>
-              <p class="text-secondary leading-relaxed mb-4">
+<p class="text-secondary leading-relaxed mb-4">
                 However, <strong>fragmentation persists in specific dimensions</strong>: healthcare-native implementation, cross-framework policy standardization, and agent identity federation. The general enterprise domain has achieved convergence, while regulated, multi-party, and specialized domains require continued development.
               </p>
-              <p class="text-secondary leading-relaxed">
-                <strong>Healthcare organizations face the most significant implementation challenge</strong> as they must adapt general-purpose tools or await specialized implementation. This gap represents both risk (implementation uncertainty, regulatory friction) and opportunity (first-mover advantage for healthcare-native governance development).
+<p class="text-secondary leading-relaxed">
+<strong>Healthcare organizations face the most significant implementation challenge</strong> as they must adapt general-purpose tools or await specialized implementation. This gap represents both risk (implementation uncertainty, regulatory friction) and opportunity (first-mover advantage for healthcare-native governance development).
               </p>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
-
-    <script>
+</div>
+</div>
+</div>
+</section>
+</div>
+<script>
         // Initialize Mermaid
         mermaid.initialize({ 
             startOnLoad: true,
@@ -1572,6 +1520,4 @@
         handleWindowResize();
         window.addEventListener('resize', handleWindowResize);
     </script>
-  
-
 </body></html>
