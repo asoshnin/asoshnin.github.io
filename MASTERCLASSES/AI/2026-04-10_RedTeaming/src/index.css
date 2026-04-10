@@ -1,0 +1,151 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 220 15% 8%;
+    --foreground: 0 0% 98%;
+    --card: 220 15% 12%;
+    --card-foreground: 0 0% 98%;
+    --popover: 220 15% 10%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 84% 60%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 220 15% 18%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 220 15% 20%;
+    --muted-foreground: 220 10% 60%;
+    --accent: 0 84% 60%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 220 15% 20%;
+    --input: 220 15% 20%;
+    --ring: 0 84% 60%;
+    --radius: 0.75rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+}
+
+/* Presentation styles */
+.presentation-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+@media (min-width: 1920px) {
+  .presentation-container {
+    max-width: 1800px;
+    padding: 3rem;
+  }
+}
+
+/* Code block styling */
+.code-block {
+  @apply bg-slate-950 rounded-xl p-6 font-mono text-sm overflow-x-auto;
+  border: 1px solid rgba(239, 68, 68, 0.2);
+}
+
+.code-block pre {
+  @apply whitespace-pre-wrap break-words;
+  line-height: 1.6;
+}
+
+/* Link styling */
+.resource-link {
+  @apply inline-flex items-center gap-2 text-red-400 hover:text-red-300 transition-colors;
+}
+
+.resource-link:hover {
+  text-decoration: underline;
+}
+
+/* Section styling */
+.section-card {
+  @apply bg-slate-900/50 rounded-2xl p-8 mb-8;
+  border: 1px solid rgba(239, 68, 68, 0.15);
+}
+
+/* Block number badge */
+.block-badge {
+  @apply inline-flex items-center justify-center w-12 h-12 rounded-xl bg-red-500/20 text-red-400 font-bold text-xl;
+}
+
+/* Quote styling */
+.quote-box {
+  @apply bg-slate-800/50 rounded-xl p-6 border-l-4 border-red-500;
+}
+
+/* Navigation */
+.nav-fixed {
+  @apply fixed top-0 left-0 right-0 z-50 bg-slate-950/90 backdrop-blur-md border-b border-red-500/20;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-slate-900;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-red-500/40 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-red-500/60;
+}
+
+/* Typography for presentation */
+.present-title {
+  @apply text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight;
+}
+
+.present-subtitle {
+  @apply text-xl md:text-2xl text-slate-400;
+}
+
+.present-heading {
+  @apply text-2xl md:text-3xl font-semibold;
+}
+
+.present-text {
+  @apply text-lg leading-relaxed;
+}
+
+/* Highlight */
+.highlight-red {
+  @apply text-red-400 font-semibold;
+}
+
+.highlight-yellow {
+  @apply text-amber-400 font-semibold;
+}
+
+/* Takeout card */
+.takeout-card {
+  @apply bg-gradient-to-br from-red-500/10 to-amber-500/10 rounded-xl p-6 border border-red-500/30;
+}
+
+/* External link icon */
+.external-link::after {
+  content: '↗';
+  @apply ml-1 text-sm;
+}

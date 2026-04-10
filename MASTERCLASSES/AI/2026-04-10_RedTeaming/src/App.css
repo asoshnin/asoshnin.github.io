@@ -1,0 +1,47 @@
+/* App-specific styles */
+
+/* Smooth transitions for interactive elements */
+button, a {
+  transition: all 0.2s ease;
+}
+
+/* Card hover effects */
+.section-card:hover {
+  border-color: rgba(239, 68, 68, 0.3);
+}
+
+/* Ensure code blocks are readable */
+.code-block pre {
+  font-family: 'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
+}
+
+/* Presentation mode optimizations */
+@media (min-width: 1920px) {
+  .present-title {
+    font-size: 4rem;
+  }
+  
+  .present-heading {
+    font-size: 2.5rem;
+  }
+  
+  .present-text {
+    font-size: 1.25rem;
+  }
+}
+
+/* Print styles for PDF export */
+@media print {
+  .nav-fixed {
+    display: none;
+  }
+  
+  main {
+    padding-top: 0;
+  }
+  
+  .section-card {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+}
