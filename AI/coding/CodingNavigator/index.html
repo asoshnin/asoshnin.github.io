@@ -1,0 +1,1716 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Human-AI Agentic Architecture: Synthesizing Structural Thinking and the Universal Discourse Core</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/11.5.0/mermaid.min.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Canela:wght@300;400;700&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'serif': ['Canela', 'serif'],
+                        'sans': ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            200: '#bae6fd',
+                            300: '#7dd3fc',
+                            400: '#38bdf8',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            700: '#0369a1',
+                            800: '#075985',
+                            900: '#0c4a6e',
+                        },
+                        secondary: {
+                            50: '#f8fafc',
+                            100: '#f1f5f9',
+                            200: '#e2e8f0',
+                            300: '#cbd5e1',
+                            400: '#94a3b8',
+                            500: '#64748b',
+                            600: '#475569',
+                            700: '#334155',
+                            800: '#1e293b',
+                            900: '#0f172a',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .hero-gradient {
+            background: linear-gradient(135deg, #0f172a 0%, #334155 50%, #475569 100%);
+        }
+        .text-shadow {
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+        .citation-link {
+            @apply text-primary-600 hover:text-primary-800 underline decoration-primary-300 hover:decoration-primary-600 transition-colors;
+        }
+        .toc-link {
+            @apply block py-2 px-4 text-secondary-600 hover:text-primary-600 hover:bg-primary-50 rounded-md transition-all duration-200 text-sm;
+        }
+        .toc-link.active {
+            @apply text-primary-700 bg-primary-50 font-medium;
+        }
+        .section-divider {
+            background: linear-gradient(90deg, transparent 0%, #e2e8f0 50%, transparent 100%);
+            height: 1px;
+            margin: 3rem 0;
+        }
+        .mermaid-container {
+            display: flex;
+            justify-content: center;
+            min-height: 300px;
+            max-height: 800px;
+            background: #ffffff;
+            border: 2px solid #e5e7eb;
+            border-radius: 12px;
+            padding: 30px;
+            margin: 30px 0;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .mermaid-container .mermaid {
+            width: 100%;
+            max-width: 100%;
+            height: 100%;
+            cursor: grab;
+            transition: transform 0.3s ease;
+            transform-origin: center center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            touch-action: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        .mermaid-container .mermaid svg {
+            max-width: 100%;
+            height: 100%;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .mermaid-container .mermaid:active {
+            cursor: grabbing;
+        }
+
+        .mermaid-container.zoomed .mermaid {
+            height: 100%;
+            width: 100%;
+            cursor: grab;
+        }
+
+        .mermaid-controls {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            display: flex;
+            gap: 10px;
+            z-index: 20;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 8px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .mermaid-control-btn {
+            background: #ffffff;
+            border: 1px solid #d1d5db;
+            border-radius: 6px;
+            padding: 10px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            color: #374151;
+            font-size: 14px;
+            min-width: 36px;
+            height: 36px;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .mermaid-control-btn:hover {
+            background: #f8fafc;
+            border-color: #3b82f6;
+            color: #3b82f6;
+            transform: translateY(-1px);
+        }
+
+        .mermaid-control-btn:active {
+            transform: scale(0.95);
+        }
+        /* Mermaid diagram styling improvements */
+        .mermaid svg {
+            max-width: 100%;
+            height: auto;
+            font-family: 'Inter', sans-serif;
+        }
+        
+        /* Ensure good contrast for different node types */
+        .mermaid .node rect,
+        .mermaid .node circle,
+        .mermaid .node ellipse,
+        .mermaid .node polygon {
+            stroke-width: 2px;
+        }
+        
+        .mermaid .node .label {
+            color: #1f2937;
+            font-weight: 500;
+            font-size: 13px;
+        }
+        
+        .mermaid .edgeLabel {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 2px 4px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: 500;
+        }
+        
+        /* Enhanced contrast for different node classes */
+        .mermaid .role-human rect {
+            fill: #fdf2f8 !important;
+            stroke: #be185d !important;
+        }
+        
+        .mermaid .role-ai rect {
+            fill: #eff6ff !important;
+            stroke: #2563eb !important;
+        }
+        
+        .mermaid .tool rect {
+            fill: #f8fafc !important;
+            stroke: #64748b !important;
+        }
+        
+        /* Ensure text readability on all node types */
+        .mermaid .role-human .label,
+        .mermaid .role-ai .label,
+        .mermaid .tool .label {
+            color: #1e293b !important;
+            font-weight: 600 !important;
+        }
+        
+        /* Edge styling for better visibility */
+        .mermaid .edgePath path {
+            stroke-width: 2px;
+            stroke: #64748b;
+        }
+        
+        /* Flow type specific styling */
+        .mermaid .edgePath[style*="stroke:#10b981"] path {
+            stroke: #10b981 !important;
+            stroke-width: 3px !important;
+        }
+        
+        .mermaid .edgePath[style*="stroke:#3b82f6"] path {
+            stroke: #3b82f6 !important;
+            stroke-width: 3px !important;
+        }
+        
+        /* Subgraph styling */
+        .mermaid .cluster rect {
+            fill: #f8fafc !important;
+            stroke: #e2e8f0 !important;
+            stroke-width: 2px !important;
+        }
+        
+        .mermaid .cluster .label {
+            color: #475569 !important;
+            font-weight: 600 !important;
+            font-size: 14px !important;
+        }
+
+    </style>
+<base target="_blank"/>
+</head>
+<body class="bg-secondary-50 text-secondary-900">
+<!-- Toggle button for mobile -->
+<button class="fixed top-4 left-4 z-50 lg:hidden bg-primary-600 text-white p-3 rounded-full shadow-lg" id="toc-toggle">
+<i class="fas fa-bars"></i>
+</button>
+<!-- Fixed Table of Contents -->
+<nav class="fixed top-0 left-0 w-80 h-full bg-white shadow-xl z-40 overflow-y-auto border-r border-secondary-200 transform -translate-x-full lg:translate-x-0 transition-transform duration-300" id="toc-nav">
+<div class="p-6">
+<button class="lg:hidden absolute top-4 right-4 text-secondary-600 hover:text-primary-600" id="toc-close">
+<i class="fas fa-times"></i>
+</button>
+<div class="mb-8">
+<h3 class="text-lg font-serif font-bold text-secondary-900 mb-2">Table of Contents</h3>
+<div class="w-12 h-0.5 bg-primary-500"></div>
+</div>
+<ul class="space-y-2 text-sm">
+<li>
+<a class="toc-link" href="#introduction">Introduction</a>
+</li>
+<li>
+<a class="toc-link" href="#conceptual-framework">1. Conceptual Framework</a>
+<ul class="ml-4 mt-2 space-y-1">
+<li>
+<a class="toc-link text-xs" href="#epistemic-primitive">1.1 Epistemic Primitive</a>
+</li>
+<li>
+<a class="toc-link text-xs" href="#intentional-primitive">1.2 Intentional Primitive</a>
+</li>
+<li>
+<a class="toc-link text-xs" href="#affective-primitive">1.3 Affective Primitive</a>
+</li>
+</ul>
+</li>
+<li>
+<a class="toc-link" href="#structural-thinking">2. Structural Thinking</a>
+<ul class="ml-4 mt-2 space-y-1">
+<li>
+<a class="toc-link text-xs" href="#design-principles">2.1 Design Principles</a>
+</li>
+<li>
+<a class="toc-link text-xs" href="#controllable-failures">2.2 Controllable Failures</a>
+</li>
+<li>
+<a class="toc-link text-xs" href="#uncontrollable-failures">2.3 Uncontrollable Failures</a>
+</li>
+</ul>
+</li>
+<li>
+<a class="toc-link" href="#topology">3. System Topology</a>
+</li>
+<li>
+<a class="toc-link" href="#integration">4. Platform Integration</a>
+</li>
+<li>
+<a class="toc-link" href="#handshake-protocol">5. Handshake Protocol</a>
+</li>
+<li>
+<a class="toc-link" href="#diagram">6. System Diagram</a>
+</li>
+<li>
+<a class="toc-link" href="#master-prompt">7. Master System Prompt</a>
+</li>
+</ul>
+</div>
+</nav>
+<!-- Main Content -->
+<main class="lg:ml-80" id="main-content">
+<!-- Hero Section -->
+<section class="hero-gradient min-h-screen flex items-center justify-center relative overflow-hidden" id="introduction">
+<div class="absolute inset-0 opacity-10">
+<img alt="Abstract human-AI collaboration network" aspect="wide" class="w-full h-full object-cover" data-modified="1" data-score="0.00" query="abstract human AI collaboration network" referrerpolicy="no-referrer" size="wallpaper" src="img/6d2dc85d47.png"/>
+</div>
+<div class="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 md:px-8 text-center">
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
+<!-- Title Column -->
+<div class="lg:col-span-2">
+<h1 class="text-4xl sm:text-5xl lg:text-6xl font-serif font-light text-white text-shadow mb-6 leading-tight">
+                Human-AI Agentic Architecture
+              </h1>
+<p class="text-lg sm:text-xl text-secondary-200 font-light mb-8 leading-relaxed">
+                Synthesizing Structural Thinking and the Universal Discourse Core for Software Engineering Excellence
+              </p>
+<div class="flex items-center justify-center lg:justify-start space-x-6 text-secondary-300">
+<div class="flex items-center space-x-2">
+<i class="fas fa-brain text-primary-400"></i>
+<span class="text-sm">Cognitive Architecture</span>
+</div>
+<div class="flex items-center space-x-2">
+<i class="fas fa-users text-primary-400"></i>
+<span class="text-sm">Human-in-the-Loop</span>
+</div>
+<div class="flex items-center space-x-2">
+<i class="fas fa-code text-primary-400"></i>
+<span class="text-sm">Multi-Agent Systems</span>
+</div>
+</div>
+</div>
+<!-- Key Highlights -->
+<div class="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+<h3 class="text-lg font-serif font-semibold text-white mb-4">Key Innovation</h3>
+<div class="space-y-3 text-sm text-secondary-200">
+<div class="flex items-start space-x-2">
+<i class="fas fa-handshake text-primary-400 mt-1"></i>
+<span>Three-phase handshake protocol for human-AI boundary transmission</span>
+</div>
+<div class="flex items-start space-x-2">
+<i class="fas fa-shield-alt text-primary-400 mt-1"></i>
+<span>Strict controllable vs. uncontrollable failure discrimination</span>
+</div>
+<div class="flex items-start space-x-2">
+<i class="fas fa-layer-group text-primary-400 mt-1"></i>
+<span>Model-agnostic architecture with modern agentic stack compatibility</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Main Content Container -->
+<div class="max-w-5xl mx-auto px-4 sm:px-6 md:px-8 py-16">
+<!-- Executive Summary -->
+<section class="mb-16">
+<div class="bg-white rounded-2xl shadow-lg border border-secondary-200 p-8 mb-8">
+<div class="flex items-center mb-6">
+<i class="fas fa-compass text-primary-600 text-2xl mr-4"></i>
+<h2 class="text-2xl font-serif font-semibold text-secondary-900">Executive Summary</h2>
+</div>
+<div class="prose prose-lg max-w-none">
+<p class="text-secondary-700 leading-relaxed mb-6">
+                This architecture synthesizes Alexey Soshnin's <strong>Universal Discourse Core (UDC)</strong> with Microsoft Research's verifier framework to create a rigorous human-AI collaboration system for software engineering. The Human Navigator retains exclusive authority over <strong>Epistemic</strong> (knowledge boundaries) and <strong>Intentional</strong> (goal-setting) primitives, while the AI Executor operates with bounded autonomy within these constraints.
+              </p>
+<p class="text-secondary-700 leading-relaxed mb-6">
+                A three-phase handshake protocol (structural bet → acknowledgment → execution) ensures clean separation between <strong>controllable failures</strong> (AI-resolved through internal retry) and <strong>uncontrollable failures</strong> (human-escalated for structural revision). The system integrates MCP for tool execution, Graph Memory for cross-session persistence, Pydantic v2 for validation, and Langfuse for observability.
+              </p>
+</div>
+</div>
+</section>
+<div class="section-divider"></div>
+<!-- Section 1: Conceptual Framework -->
+<section class="mb-16" id="conceptual-framework">
+<h2 class="text-3xl font-serif font-semibold text-secondary-900 mb-8">1. Conceptual Framework: UDC Primitives and Human-AI Role Allocation</h2>
+<div class="prose prose-lg max-w-none text-secondary-700">
+<p class="mb-6">
+              The Universal Discourse Core (UDC) framework, proposed by Alexey Soshnin, establishes three fundamental cognitive-informational primitives that underlie all meaningful communication: <strong>Epistemic</strong> (Pe), governing knowledge exchange and truth-seeking; <strong>Intentional</strong> (Pi), governing goal alignment and cooperative activity; and <strong>Affective</strong> (Pa), governing social-emotional dimensions and trust maintenance <a class="citation-link" href="https://medium.com/@alexeysoshnin/a-universal-discourse-core-a-proposed-cognitive-infrastructure-for-agi-fbd34b4a5742" target="_blank">[3]</a>. These primitives represent distinct operational modes with bidirectional transitions—Pe ↔ Pi ↔ Pa ↔ Pe—that must be explicitly managed in any human-AI collaborative system.
+            </p>
+<p class="mb-8">
+              The architectural imperative is clear: humans excel at <strong>structural bets</strong>—irreversible, high-stakes decisions that establish foundational constraints—while AI systems demonstrate superior performance in <strong>incremental optimization</strong> within fixed boundaries. The UDC primitives provide the linguistic and operational apparatus for formalizing this division, ensuring that each party operates within their zone of comparative advantage while maintaining coherent joint intentionality <a class="citation-link" href="https://medium.com/@alexeysoshnin/a-universal-discourse-core-a-proposed-cognitive-infrastructure-for-agi-fbd34b4a5742" target="_blank">[3]</a>.
+            </p>
+</div>
+<!-- Epistemic Primitive -->
+<div class="mb-12" id="epistemic-primitive">
+<h3 class="text-2xl font-serif font-semibold text-secondary-900 mb-6">1.1 Epistemic Primitive (Knowledge Exchange)</h3>
+<div class="bg-white rounded-xl shadow-md border border-secondary-200 p-8 mb-8">
+<p class="text-secondary-700 mb-6">
+                The Epistemic primitive addresses how knowledge is constructed, validated, transmitted, and revised within the collaborative system. In software engineering contexts, this encompasses the entire apparatus of domain modeling, architectural constraints, coding standards, and verification criteria that determine what counts as valid knowledge. The architecture implements a <strong>strict hierarchical epistemology</strong>: the Human Navigator establishes the boundaries of valid knowledge, while the AI Executor processes information exclusively within these boundaries.
+              </p>
+<h4 class="text-xl font-serif font-semibold text-secondary-800 mb-4">Human Navigator Responsibility: Domain Definition and Truth Criteria</h4>
+<div class="overflow-x-auto mb-6">
+<table class="w-full border-collapse border border-secondary-300 rounded-lg">
+<thead class="bg-secondary-50">
+<tr>
+<th class="border border-secondary-300 px-4 py-3 text-left font-semibold text-secondary-800">Function</th>
+<th class="border border-secondary-300 px-4 py-3 text-left font-semibold text-secondary-800">Description</th>
+<th class="border border-secondary-300 px-4 py-3 text-left font-semibold text-secondary-800">Implementation Mechanism</th>
+</tr>
+</thead>
+<tbody class="text-sm">
+<tr>
+<td class="border border-secondary-300 px-4 py-3 font-medium">Domain Bounding</td>
+<td class="border border-secondary-300 px-4 py-3">Explicit delimitation of relevant entities, relationships, and phenomena</td>
+<td class="border border-secondary-300 px-4 py-3">Context Files (AGENTS.md, CLAUDE.md), ontology specifications</td>
+</tr>
+<tr>
+<td class="border border-secondary-300 px-4 py-3 font-medium">Criteria Specification</td>
+<td class="border border-secondary-300 px-4 py-3">Non-overlapping evaluation standards for knowledge claims</td>
+<td class="border border-secondary-300 px-4 py-3">Pydantic schemas, test specifications, architectural patterns</td>
+</tr>
+<tr>
+<td class="border border-secondary-300 px-4 py-3 font-medium">Truth Convention Establishment</td>
+<td class="border border-secondary-300 px-4 py-3">Meta-rules for resolving disagreements and validating sources</td>
+<td class="border border-secondary-300 px-4 py-3">Authority hierarchies, inference pattern authorizations</td>
+</tr>
+<tr>
+<td class="border border-secondary-300 px-4 py-3 font-medium">Structural Bet Articulation</td>
+<td class="border border-secondary-300 px-4 py-3">Formal, machine-parseable commitment to knowledge architecture</td>
+<td class="border border-secondary-300 px-4 py-3">XML-structured declarations with versioning and acknowledgment protocols</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="text-secondary-700 text-sm mb-4">
+                The <strong>structural bet</strong> is the concrete mechanism of epistemic boundary transmission. Distinguished from ordinary preferences by its binding immutability within execution contexts, the structural bet specifies scope, constraints, success criteria, and consequences of violation. <a class="citation-link" href="https://www.getdbt.com/blog/mcp-servers" target="_blank">[46]</a>
+</p>
+</div>
+</div>
+<!-- Intentional Primitive -->
+<div class="mb-12" id="intentional-primitive">
+<h3 class="text-2xl font-serif font-semibold text-secondary-900 mb-6">1.2 Intentional Primitive (Goal Alignment)</h3>
+<div class="bg-white rounded-xl shadow-md border border-secondary-200 p-8">
+<p class="text-secondary-700 mb-6">
+                The Intentional primitive governs how goals are established, communicated, decomposed, and pursued through coordinated action. The architecture implements <strong>asymmetric joint intentionality</strong>: the Human Navigator maintains strategic intentionality, while the AI Executor implements tactical intentionality.
+              </p>
+<div class="bg-secondary-50 rounded-lg p-6 mb-6">
+<h5 class="font-semibold text-secondary-800 mb-3">ReAct Pattern Implementation</h5>
+<pre class="bg-secondary-800 text-secondary-100 p-4 rounded-md text-sm overflow-x-auto"><code>&lt;thinking&gt;
+[Explicit reasoning about current state, goal, and available actions]
+&lt;/thinking&gt;
+&lt;action&gt;
+[Tool invocation or final answer with structured parameters]
+&lt;/action&gt;</code></pre>
+<p class="text-secondary-600 text-sm mt-2">This pattern enforces intentional transparency, making reasoning processes inspectable.</p>
+</div>
+<h4 class="text-xl font-serif font-semibold text-secondary-800 mb-4">Cooperative Activity Framework</h4>
+<div class="overflow-x-auto">
+<table class="w-full border-collapse border border-secondary-300 rounded-lg">
+<thead class="bg-secondary-50">
+<tr>
+<th class="border border-secondary-300 px-4 py-3 text-left font-semibold text-secondary-800">Activity Type</th>
+<th class="border border-secondary-300 px-4 py-3 text-left font-semibold text-secondary-800">Authority Distribution</th>
+<th class="border border-secondary-300 px-4 py-3 text-left font-semibold text-secondary-800">Appropriate Context</th>
+</tr>
+</thead>
+<tbody class="text-sm">
+<tr>
+<td class="border border-secondary-300 px-4 py-3 font-medium">Directed Activity</td>
+<td class="border border-secondary-300 px-4 py-3">Human specifies means; AI executes instrumentally</td>
+<td class="border border-secondary-300 px-4 py-3">Human expertise exceeds AI; specific procedures mandated</td>
+</tr>
+<tr>
+<td class="border border-secondary-300 px-4 py-3 font-medium">Delegated Activity (default)</td>
+<td class="border border-secondary-300 px-4 py-3">Human specifies objectives and constraints; AI selects means</td>
+<td class="border border-secondary-300 px-4 py-3">Routine optimization within well-understood domains</td>
+</tr>
+<tr>
+<td class="border border-secondary-300 px-4 py-3 font-medium">Collaborative Activity</td>
+<td class="border border-secondary-300 px-4 py-3">Real-time joint means selection</td>
+<td class="border border-secondary-300 px-4 py-3">Complex trade-offs requiring human judgment</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<!-- Affective Primitive -->
+<div class="mb-12" id="affective-primitive">
+<h3 class="text-2xl font-serif font-semibold text-secondary-900 mb-6">1.3 Affective Primitive (Social-Emotional Dimension)</h3>
+<div class="bg-white rounded-xl shadow-md border border-secondary-200 p-8">
+<p class="text-secondary-700 mb-6">
+                The Affective primitive addresses the social and emotional dimensions of collaboration—trust, rapport, emotional regulation, and relationship maintenance. While current AI systems lack genuine emotional experience, the architecture implements <strong>functional affect</strong> through structural substitutes that maintain effective collaboration.
+              </p>
+<h4 class="text-xl font-serif font-semibold text-secondary-800 mb-4">Trust Architecture Levels</h4>
+<div class="overflow-x-auto mb-6">
+<table class="w-full border-collapse border border-secondary-300 rounded-lg">
+<thead class="bg-secondary-50">
+<tr>
+<th class="border border-secondary-300 px-4 py-3 text-left font-semibold text-secondary-800">Trust Level</th>
+<th class="border border-secondary-300 px-4 py-3 text-left font-semibold text-secondary-800">Definition</th>
+<th class="border border-secondary-300 px-4 py-3 text-left font-semibold text-secondary-800">Architectural Support</th>
+</tr>
+</thead>
+<tbody class="text-sm">
+<tr>
+<td class="border border-secondary-300 px-4 py-3 font-medium">Competence Trust</td>
+<td class="border border-secondary-300 px-4 py-3">Belief in AI's capability to execute tasks</td>
+<td class="border border-secondary-300 px-4 py-3">Transparent demonstration of capabilities; consistent performance within bounds</td>
+</tr>
+<tr>
+<td class="border border-secondary-300 px-4 py-3 font-medium">Integrity Trust</td>
+<td class="border border-secondary-300 px-4 py-3">Belief that AI will operate within specified constraints</td>
+<td class="border border-secondary-300 px-4 py-3">Explicit prohibition of constraint violation; boundary controller monitoring</td>
+</tr>
+<tr>
+<td class="border border-secondary-300 px-4 py-3 font-medium">Benevolence Trust</td>
+<td class="border border-secondary-300 px-4 py-3">Belief that AI's actions are oriented toward human interests</td>
+<td class="border border-secondary-300 px-4 py-3">Architectural constraints preventing harm; explicit alignment statements</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="text-secondary-700 text-sm">
+                The architecture's emphasis on human hierarchy preservation serves <strong>affective as well as functional purposes</strong>. By ensuring that the Human Navigator retains ultimate authority, the system prevents the anxiety and alienation accompanying experiences of technological displacement <a class="citation-link" href="https://www.getdbt.com/blog/mcp-servers" target="_blank">[46]</a>.
+              </p>
+</div>
+</div>
+</section>
+<div class="section-divider"></div>
+<!-- Section 2: Structural Thinking -->
+<section class="mb-16" id="structural-thinking">
+<h2 class="text-3xl font-serif font-semibold text-secondary-900 mb-8">2. Structural Thinking and the Universal Verifier Framework</h2>
+<div class="prose prose-lg max-w-none text-secondary-700 mb-8">
+<p>
+              The Microsoft Research paper "The Art of Building Verifiers for Computer Use Agents" (arXiv:2604.06240) provides critical foundations for reliable AI execution, identifying <strong>fragile workflows</strong> rather than model errors as the primary failure source in multi-agent systems <a class="citation-link" href="https://arxiv.org/html/2604.06240v1" target="_blank">[32]</a>. This insight motivates a fundamental reorientation: from treating failures as problems to be solved by better models, to treating failures as information to be classified and routed to appropriate resolution mechanisms.
+            </p>
+</div>
+<div class="mb-12" id="design-principles">
+<h3 class="text-2xl font-serif font-semibold text-secondary-900 mb-6">2.1 Core Design Principles from arXiv:2604.06240</h3>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
+<div class="bg-white rounded-xl shadow-md border border-secondary-200 p-6">
+<div class="flex items-center mb-4">
+<i class="fas fa-layer-group text-primary-600 text-xl mr-3"></i>
+<h4 class="text-lg font-serif font-semibold text-secondary-800">Non-Overlapping Criteria</h4>
+</div>
+<p class="text-secondary-600 text-sm mb-4">
+                  Addresses attribution ambiguity by ensuring each criterion evaluates a distinct dimension without redundancy.
+                </p>
+<ul class="text-sm text-secondary-600 space-y-1">
+<li>• Syntactic correctness</li>
+<li>• Semantic validity</li>
+<li>• Performance characteristics</li>
+<li>• Security properties</li>
+</ul>
+</div>
+<div class="bg-white rounded-xl shadow-md border border-secondary-200 p-6">
+<div class="flex items-center mb-4">
+<i class="fas fa-arrows-split-up-and-left text-primary-600 text-xl mr-3"></i>
+<h4 class="text-lg font-serif font-semibold text-secondary-800">Process vs. Outcome Separation</h4>
+</div>
+<p class="text-secondary-600 text-sm mb-4">
+                  Solves the credit assignment problem by distinguishing execution quality from result achievement.
+                </p>
+<div class="bg-secondary-50 rounded p-3 text-xs">
+<strong>Critical Insight:</strong> Good process + bad outcome = uncontrollable failure requiring structural revision.
+                </div>
+</div>
+<div class="bg-white rounded-xl shadow-md border border-secondary-200 p-6">
+<div class="flex items-center mb-4">
+<i class="fas fa-shield-alt text-primary-600 text-xl mr-3"></i>
+<h4 class="text-lg font-serif font-semibold text-secondary-800">Failure Classification</h4>
+</div>
+<p class="text-secondary-600 text-sm mb-4">
+                  Operational discrimination between controllable (AI-resolvable) and uncontrollable (human-escalated) failures.
+                </p>
+<div class="bg-secondary-50 rounded p-3 text-xs">
+<strong>Efficiency:</strong> Preserve human engagement for structural judgment only.
+                </div>
+</div>
+</div>
+</div>
+<div class="mb-12" id="controllable-failures">
+<h3 class="text-2xl font-serif font-semibold text-secondary-900 mb-6">2.2 Controllable Failures (AI Execution Layer)</h3>
+<div class="bg-white rounded-xl shadow-md border border-secondary-200 p-8">
+<p class="text-secondary-700 mb-6">
+                Controllable failures are defined by three characteristics: <strong>occurrence within AI operational scope</strong>, <strong>potential resolution through modified execution</strong>, and <strong>no implication of structural defect</strong>. These failures represent normal friction of autonomous operation and are expected at non-trivial rates in complex tasks.
+              </p>
+<h4 class="text-xl font-serif font-semibold text-secondary-800 mb-4">Response Protocol: Structured Retry Loop</h4>
+<div class="overflow-x-auto">
+<table class="w-full border-collapse border border-secondary-300 rounded-lg">
+<thead class="bg-secondary-50">
+<tr>
+<th class="border border-secondary-300 px-4 py-3 text-left font-semibold text-secondary-800">Stage</th>
+<th class="border border-secondary-300 px-4 py-3 text-left font-semibold text-secondary-800">Action</th>
+<th class="border border-secondary-300 px-4 py-3 text-left font-semibold text-secondary-800">Trigger Condition</th>
+<th class="border border-secondary-300 px-4 py-3 text-left font-semibold text-secondary-800">Escalation</th>
+</tr>
+</thead>
+<tbody class="text-sm">
+<tr>
+<td class="border border-secondary-300 px-4 py-3 font-medium">Immediate retry</td>
+<td class="border border-secondary-300 px-4 py-3">Re-execution with identical parameters</td>
+<td class="border border-secondary-300 px-4 py-3">Transient failure detection</td>
+<td class="border border-secondary-300 px-4 py-3">Persistent failure</td>
+</tr>
+<tr>
+<td class="border border-secondary-300 px-4 py-3 font-medium">Parameter adjustment</td>
+<td class="border border-secondary-300 px-4 py-3">Modified generation temperature, expanded context</td>
+<td class="border border-secondary-300 px-4 py-3">Immediate retry failure</td>
+<td class="border border-secondary-300 px-4 py-3">Continued failure</td>
+</tr>
+<tr>
+<td class="border border-secondary-300 px-4 py-3 font-medium">Approach revision</td>
+<td class="border border-secondary-300 px-4 py-3">Different tool selection, alternative query formulation</td>
+<td class="border border-secondary-300 px-4 py-3">Parameter adjustment failure</td>
+<td class="border border-secondary-300 px-4 py-3">Continued failure</td>
+</tr>
+<tr>
+<td class="border border-secondary-300 px-4 py-3 font-medium">Provisional escalation</td>
+<td class="border border-secondary-300 px-4 py-3">Boundary Controller review for uncontrollable status</td>
+<td class="border border-secondary-300 px-4 py-3">Exhaustion of structured retry</td>
+<td class="border border-secondary-300 px-4 py-3">Reclassification and human escalation</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="mb-12" id="uncontrollable-failures">
+<h3 class="text-2xl font-serif font-semibold text-secondary-900 mb-6">2.3 Uncontrollable Failures (Human Structural Layer)</h3>
+<div class="bg-white rounded-xl shadow-md border border-secondary-200 p-8">
+<p class="text-secondary-700 mb-6">
+                Uncontrollable failures are defined by three characteristics: <strong>origin in structural constraints</strong>, <strong>unresolvability through execution modification</strong>, and <strong>requirement of structural revision</strong>. These failures represent fundamental mismatches between task requirements and established boundaries.
+              </p>
+<div class="bg-amber-50 border-l-4 border-amber-400 p-4 mb-6">
+<div class="flex items-start">
+<i class="fas fa-exclamation-triangle text-amber-600 mr-3 mt-1"></i>
+<div>
+<h5 class="font-semibold text-amber-800 mb-2">Critical Anti-Pattern</h5>
+<p class="text-amber-700 text-sm">
+                      The architecture's strict prohibition on AI attempts to fix structural flaws reflects the recognition that such attempts are <strong>actively harmful</strong>—consuming resources, generating false confidence, and delaying appropriate human engagement.
+                    </p>
+</div>
+</div>
+</div>
+<h4 class="text-xl font-serif font-semibold text-secondary-800 mb-4">Response Protocol: Immediate Escalation with Structured Handoff</h4>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div class="bg-secondary-50 rounded-lg p-4">
+<h5 class="font-semibold text-secondary-800 mb-2">Execution Suspension</h5>
+<p class="text-secondary-600 text-sm">All operations halt immediately to prevent compounding; system state is preserved for analysis.</p>
+</div>
+<div class="bg-secondary-50 rounded-lg p-4">
+<h5 class="font-semibold text-secondary-800 mb-2">Failure Documentation</h5>
+<p class="text-secondary-600 text-sm">Comprehensive trace assembly with failure manifestation, attempted resolutions, and constraint analysis.</p>
+</div>
+<div class="bg-secondary-50 rounded-lg p-4">
+<h5 class="font-semibold text-secondary-800 mb-2">Human Notification</h5>
+<p class="text-secondary-600 text-sm">Prioritized alert with context summary, estimated urgency, and recommended consultation scope.</p>
+</div>
+<div class="bg-secondary-50 rounded-lg p-4">
+<h5 class="font-semibold text-secondary-800 mb-2">Structural Consultation</h5>
+<p class="text-secondary-600 text-sm">Human Navigator review with options for constraint relaxation, objective modification, or task abandonment.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<div class="section-divider"></div>
+<!-- Section 3: System Topology -->
+<section class="mb-16" id="topology">
+<h2 class="text-3xl font-serif font-semibold text-secondary-900 mb-8">3. System Topology and Interaction Dynamics</h2>
+<div class="prose prose-lg max-w-none text-secondary-700 mb-8">
+<p>
+              The architecture implements a <strong>strict three-layer hierarchy</strong> that positions the Human Navigator at the apex of decision authority, with the AI Executor operating within bounds established by human structural bets, and with supporting infrastructure providing persistent state, tool access, validation, and observability. This hierarchy is <strong>functional, not merely organizational</strong>—each layer has distinct capabilities and responsibilities that are not substitutable across layers.
+            </p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
+<div class="bg-white rounded-xl shadow-md border border-secondary-200 p-6">
+<div class="flex items-center mb-4">
+<i class="fas fa-user-tie text-primary-600 text-xl mr-3"></i>
+<h3 class="text-lg font-serif font-semibold text-secondary-800">Human Layer</h3>
+</div>
+<ul class="text-sm text-secondary-600 space-y-2">
+<li>• Ultimate objective authority</li>
+<li>• Structural bet formulation</li>
+<li>• Stakeholder accountability</li>
+<li>• Creative insight capability</li>
+</ul>
+</div>
+<div class="bg-white rounded-xl shadow-md border border-secondary-200 p-6">
+<div class="flex items-center mb-4">
+<i class="fas fa-robot text-primary-600 text-xl mr-3"></i>
+<h3 class="text-lg font-serif font-semibold text-secondary-800">AI Layer</h3>
+</div>
+<ul class="text-sm text-secondary-600 space-y-2">
+<li>• Bounded autonomous execution</li>
+<li>• Task decomposition</li>
+<li>• Tool orchestration</li>
+<li>• Self-monitoring</li>
+</ul>
+</div>
+<div class="bg-white rounded-xl shadow-md border border-secondary-200 p-6">
+<div class="flex items-center mb-4">
+<i class="fas fa-cogs text-primary-600 text-xl mr-3"></i>
+<h3 class="text-lg font-serif font-semibold text-secondary-800">Tool Layer</h3>
+</div>
+<ul class="text-sm text-secondary-600 space-y-2">
+<li>• MCP protocol interface</li>
+<li>• Persistent Graph Memory</li>
+<li>• Schema validation</li>
+<li>• Observability logging</li>
+</ul>
+</div>
+</div>
+<div class="bg-white rounded-xl shadow-md border border-secondary-200 p-8">
+<h3 class="text-xl font-serif font-semibold text-secondary-800 mb-6">Information Flow Patterns</h3>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="border border-secondary-200 rounded-lg p-4">
+<h4 class="font-semibold text-secondary-800 mb-3 flex items-center">
+<i class="fas fa-arrow-down text-primary-600 mr-2"></i>
+                  Top-Down Flow
+                </h4>
+<p class="text-secondary-600 text-sm mb-2">Structural bets from Human Navigator to AI Executor</p>
+<ul class="text-xs text-secondary-500 space-y-1">
+<li>• Epistemic boundaries</li>
+<li>• Intentional objectives</li>
+<li>• Constraint specifications</li>
+</ul>
+</div>
+<div class="border border-secondary-200 rounded-lg p-4">
+<h4 class="font-semibold text-secondary-800 mb-3 flex items-center">
+<i class="fas fa-arrow-up text-primary-600 mr-2"></i>
+                  Bottom-Up Flow
+                </h4>
+<p class="text-secondary-600 text-sm mb-2">Execution results from AI Executor to Human Navigator</p>
+<ul class="text-xs text-secondary-500 space-y-1">
+<li>• Progress indicators</li>
+<li>• Failure classifications</li>
+<li>• Outcome reports</li>
+</ul>
+</div>
+<div class="border border-secondary-200 rounded-lg p-4">
+<h4 class="font-semibold text-secondary-800 mb-3 flex items-center">
+<i class="fas fa-arrows-left-right text-primary-600 mr-2"></i>
+                  Lateral Flow
+                </h4>
+<p class="text-secondary-600 text-sm mb-2">State persistence via Graph Memory</p>
+<ul class="text-xs text-secondary-500 space-y-1">
+<li>• Cross-session continuity</li>
+<li>• Multi-agent coordination</li>
+<li>• Learning accumulation</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<div class="section-divider"></div>
+<!-- Section 4: Platform Integration -->
+<section class="mb-16" id="integration">
+<h2 class="text-3xl font-serif font-semibold text-secondary-900 mb-8">4. Platform Integration and Technical Implementation</h2>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
+<div class="bg-white rounded-xl shadow-md border border-secondary-200 p-6">
+<h3 class="text-xl font-serif font-semibold text-secondary-800 mb-4 flex items-center">
+<i class="fas fa-plug text-primary-600 mr-3"></i>
+                Model Context Protocol (MCP)
+              </h3>
+<p class="text-secondary-600 text-sm mb-4">
+                Standardized interface for AI-environment interaction, addressing tool integration challenges <a class="citation-link" href="https://composio.dev/content/ai-agent-tool-calling-guide" target="_blank">[117]</a>.
+              </p>
+<ul class="text-sm text-secondary-600 space-y-2">
+<li><strong>Dynamic Discovery:</strong> Runtime identification of available capabilities</li>
+<li><strong>Unified Invocation:</strong> Consistent execution regardless of implementation</li>
+<li><strong>Result Integration:</strong> Structured feedback incorporation into AI reasoning</li>
+</ul>
+</div>
+<div class="bg-white rounded-xl shadow-md border border-secondary-200 p-6">
+<h3 class="text-xl font-serif font-semibold text-secondary-800 mb-4 flex items-center">
+<i class="fas fa-database text-primary-600 mr-3"></i>
+                Persistent Graph Memory
+              </h3>
+<p class="text-secondary-600 text-sm mb-4">
+                Addresses "context rot" through persistent structured storage enabling cross-session continuity <a class="citation-link" href="https://howaiworks.ai/blog/anthropic-context-engineering-for-agents" target="_blank">[123]</a>.
+              </p>
+<ul class="text-sm text-secondary-600 space-y-2">
+<li><strong>Cross-Session State:</strong> Domain knowledge, task history, interaction patterns</li>
+<li><strong>Knowledge Graph Representation:</strong> Entities, relationships, constraints</li>
+<li><strong>Non-Contiguous Recovery:</strong> Protocols for short, medium, and long gaps</li>
+</ul>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+<div class="bg-white rounded-xl shadow-md border border-secondary-200 p-6">
+<h3 class="text-xl font-serif font-semibold text-secondary-800 mb-4 flex items-center">
+<i class="fas fa-check-circle text-primary-600 mr-3"></i>
+                Pydantic v2 Validation
+              </h3>
+<p class="text-secondary-600 text-sm mb-4">
+                Rigid schema enforcement at the probabilistic-deterministic boundary with production-ready performance <a class="citation-link" href="https://www.itsolotime.com/archives/19457" target="_blank">[103]</a>.
+              </p>
+<div class="bg-secondary-50 rounded p-3 text-xs mb-3">
+<strong>Hallucination Detection:</strong> Type safety provides first-line defense against invented categories and impossible combinations.
+              </div>
+<ul class="text-sm text-secondary-600 space-y-1">
+<li>• Rigid schema enforcement for AI outputs</li>
+<li>• Structured response generation</li>
+<li>• Reference validation with Graph Memory</li>
+</ul>
+</div>
+<div class="bg-white rounded-xl shadow-md border border-secondary-200 p-6">
+<h3 class="text-xl font-serif font-semibold text-secondary-800 mb-4 flex items-center">
+<i class="fas fa-chart-line text-primary-600 mr-3"></i>
+                Langfuse Observability
+              </h3>
+<p class="text-secondary-600 text-sm mb-4">
+                Comprehensive trace logging and analysis for monitoring, debugging, optimization, and accountability <a class="citation-link" href="https://docs.datadoghq.com/llm_observability/mcp_server/" target="_blank">[116]</a>.
+              </p>
+<ul class="text-sm text-secondary-600 space-y-2">
+<li><strong>Execution Trace Logging:</strong> LLM invocations, tool calls, decision points</li>
+<li><strong>Failure Mode Analysis:</strong> Pattern detection, correlation identification</li>
+<li><strong>Interaction Auditing:</strong> Accountability establishment, compliance verification</li>
+</ul>
+</div>
+</div>
+</section>
+<div class="section-divider"></div>
+<!-- Section 5: Handshake Protocol -->
+<section class="mb-16" id="handshake-protocol">
+<h2 class="text-3xl font-serif font-semibold text-secondary-900 mb-8">5. The Handshake Protocol: Structural Bet to Execution Loop</h2>
+<div class="prose prose-lg max-w-none text-secondary-700 mb-8">
+<p>
+              The handshake protocol operationalizes the transition from human structural specification to AI autonomous execution. This protocol is the architecture's critical path: its correct implementation determines whether theoretical properties are realized in practice <a class="citation-link" href="https://www.getdbt.com/blog/mcp-servers" target="_blank">[46]</a>.
+            </p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
+<div class="bg-white rounded-xl shadow-md border border-secondary-200 p-6">
+<div class="flex items-center mb-4">
+<div class="w-8 h-8 bg-primary-600 text-white rounded-full flex items-center justify-center text-sm font-bold mr-3">1</div>
+<h3 class="text-lg font-serif font-semibold text-secondary-800">Phase 1: Human Structural Bet</h3>
+</div>
+<ul class="text-sm text-secondary-600 space-y-2">
+<li>• Architecture definition and domain bounding</li>
+<li>• Non-overlapping criteria specification</li>
+<li>• Explicit process/outcome separation declaration</li>
+<li>• Structural bet encoding in machine-parseable format</li>
+</ul>
+</div>
+<div class="bg-white rounded-xl shadow-md border border-secondary-200 p-6">
+<div class="flex items-center mb-4">
+<div class="w-8 h-8 bg-primary-600 text-white rounded-full flex items-center justify-center text-sm font-bold mr-3">2</div>
+<h3 class="text-lg font-serif font-semibold text-secondary-800">Phase 2: AI Acknowledgment</h3>
+</div>
+<ul class="text-sm text-secondary-600 space-y-2">
+<li>• Boundary parsing and constraint internalization</li>
+<li>• Tool and memory context preparation</li>
+<li>• Feasibility confirmation or early uncontrollable detection</li>
+<li>• Structured acknowledgment with understanding verification</li>
+</ul>
+</div>
+<div class="bg-white rounded-xl shadow-md border border-secondary-200 p-6">
+<div class="flex items-center mb-4">
+<div class="w-8 h-8 bg-primary-600 text-white rounded-full flex items-center justify-center text-sm font-bold mr-3">3</div>
+<h3 class="text-lg font-serif font-semibold text-secondary-800">Phase 3: Incremental Execution</h3>
+</div>
+<ul class="text-sm text-secondary-600 space-y-2">
+<li>• Task decomposition and sub-goal pursuit</li>
+<li>• Continuous validation against human-defined criteria</li>
+<li>• Dynamic failure classification and path selection</li>
+<li>• Progress reporting and outcome documentation</li>
+</ul>
+</div>
+</div>
+<div class="bg-white rounded-xl shadow-md border border-secondary-200 p-8">
+<h3 class="text-xl font-serif font-semibold text-secondary-800 mb-6">Protocol Validation Mechanisms</h3>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="border border-secondary-200 rounded-lg p-4">
+<h4 class="font-semibold text-secondary-800 mb-3">Phase 1 Verification</h4>
+<ul class="text-sm text-secondary-600 space-y-1">
+<li>• Completeness and consistency checking</li>
+<li>• Non-overlapping criteria verification</li>
+<li>• Achievability assessment</li>
+<li>• Conflict detection</li>
+</ul>
+</div>
+<div class="border border-secondary-200 rounded-lg p-4">
+<h4 class="font-semibold text-secondary-800 mb-3">Phase 2 Verification</h4>
+<ul class="text-sm text-secondary-600 space-y-1">
+<li>• Schema conformance validation</li>
+<li>• Paraphrase verification</li>
+<li>• Fidelity confirmation</li>
+<li>• Explicit conflict identification</li>
+</ul>
+</div>
+<div class="border border-secondary-200 rounded-lg p-4">
+<h4 class="font-semibold text-secondary-800 mb-3">Phase 3 Monitoring</h4>
+<ul class="text-sm text-secondary-600 space-y-1">
+<li>• Continuous constraint checking</li>
+<li>• Validation before external effect</li>
+<li>• Execution trace monitoring</li>
+<li>• Boundary detection</li>
+</ul>
+</div>
+<div class="border border-secondary-200 rounded-lg p-4">
+<h4 class="font-semibold text-secondary-800 mb-3">Failure Classification</h4>
+<ul class="text-sm text-secondary-600 space-y-1">
+<li>• Pattern matching against known types</li>
+<li>• Retry history analysis</li>
+<li>• Constraint interaction detection</li>
+<li>• Confidence-based routing</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<div class="section-divider"></div>
+<!-- Section 6: System Diagram -->
+<section class="mb-16" id="diagram">
+<h2 class="text-3xl font-serif font-semibold text-secondary-900 mb-8">6. Mermaid Diagram Specification</h2>
+<div class="bg-white rounded-xl shadow-md border border-secondary-200 p-8 mb-8">
+<p class="text-secondary-700 mb-6">
+              The complete system topology is specified in the following Mermaid diagram, with explicit encoding of UDC primitives, failure paths, and layer boundaries <a class="citation-link" href="https://www.getdbt.com/blog/mcp-servers" target="_blank">[46]</a>:
+            </p>
+<div class="mermaid-container">
+<div class="mermaid-controls">
+<button class="mermaid-control-btn zoom-in" title="Zoom In">
+<i class="fas fa-search-plus"></i>
+</button>
+<button class="mermaid-control-btn zoom-out" title="Zoom Out">
+<i class="fas fa-search-minus"></i>
+</button>
+<button class="mermaid-control-btn reset-zoom" title="Reset">
+<i class="fas fa-expand-arrows-alt"></i>
+</button>
+<button class="mermaid-control-btn fullscreen" title="View Fullscreen">
+<i class="fas fa-expand"></i>
+</button>
+</div>
+<div class="mermaid">
+				graph TD
+					subgraph HumanLayer
+						HD(Human Navigator - Principal Engineer)
+					end
+
+					subgraph AILayer
+						AI(AI Executor - Autonomous Agent)
+						MCP(Model Context Protocol API)
+						GM(Graph Memory)
+						VF(Verification Framework - Pydantic)
+						LS(Logging and Observability - Langfuse)
+						BC(Boundary Controller)
+					end
+
+					HD -- Epistemic E - Define Domain and Criteria --&gt; AI
+					AI -- Process Knowledge --&gt; GM
+					GM -- Updated State --&gt; AI
+
+					HD -- Intentional I - Set Goals and Tasks --&gt; AI
+					AI -- Perform Task --&gt; MCP
+					MCP -- API Feedback --&gt; AI
+					AI -- Validate Output --&gt; VF
+					VF -- Validation Result --&gt; AI
+					AI -- Report Outcome and Metrics --&gt; HD
+					LS -- Log Execution --&gt; AI
+					AI -- Check Failure --&gt; BC
+
+					BC -- Controllable Failure CF - Re-iterate --&gt; AI
+					BC -- Uncontrollable Failure UF - Escalate --&gt; HD
+					HD -- Adjust Structural Bet --&gt; AI
+
+					classDef role-human fill:#fdf2f8,stroke:#be185d,stroke-width:3px,color:#1e293b
+					classDef role-ai fill:#eff6ff,stroke:#2563eb,stroke-width:3px,color:#1e293b
+					classDef tool fill:#f8fafc,stroke:#64748b,stroke-width:2px,color:#1e293b
+
+					class HD role-human
+					class AI role-ai
+					class MCP,GM,VF,LS,BC tool
+              </div>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+<div class="bg-white rounded-xl shadow-md border border-secondary-200 p-6">
+<h3 class="text-xl font-serif font-semibold text-secondary-800 mb-4">Node Topology</h3>
+<div class="space-y-3">
+<div class="flex items-start">
+<div class="w-4 h-4 bg-pink-100 border border-pink-700 rounded mr-3 mt-1"></div>
+<div>
+<p class="font-semibold text-secondary-800 text-sm">Human Navigator</p>
+<p class="text-secondary-600 text-xs">Epistemic and Intentional authority</p>
+</div>
+</div>
+<div class="flex items-start">
+<div class="w-4 h-4 bg-blue-100 border border-blue-700 rounded mr-3 mt-1"></div>
+<div>
+<p class="font-semibold text-secondary-800 text-sm">AI Executor</p>
+<p class="text-secondary-600 text-xs">Autonomous execution within bounds</p>
+</div>
+</div>
+<div class="flex items-start">
+<div class="w-4 h-4 bg-secondary-100 border border-secondary-500 rounded mr-3 mt-1"></div>
+<div>
+<p class="font-semibold text-secondary-800 text-sm">Tool Components</p>
+<p class="text-secondary-600 text-xs">Infrastructure capabilities without agency</p>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-white rounded-xl shadow-md border border-secondary-200 p-6">
+<h3 class="text-xl font-serif font-semibold text-secondary-800 mb-4">Edge Encoding</h3>
+<div class="space-y-3">
+<div class="flex items-start">
+<div class="w-4 h-1 bg-green-500 rounded mr-3 mt-2"></div>
+<div>
+<p class="font-semibold text-secondary-800 text-sm">Green: Epistemic Flow</p>
+<p class="text-secondary-600 text-xs">Knowledge/domain boundary transmission</p>
+</div>
+</div>
+<div class="flex items-start">
+<div class="w-4 h-1 bg-blue-500 rounded mr-3 mt-2"></div>
+<div>
+<p class="font-semibold text-secondary-800 text-sm">Blue: Intentional Flow</p>
+<p class="text-secondary-600 text-xs">Goal/task assignment from human to AI</p>
+</div>
+</div>
+<div class="flex items-start">
+<div class="w-4 h-0.5 border-t-2 border-dashed border-secondary-500 mr-3 mt-2"></div>
+<div>
+<p class="font-semibold text-secondary-800 text-sm">Dashed: Failure Paths</p>
+<p class="text-secondary-600 text-xs">CF = controllable, UF = uncontrollable</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<div class="section-divider"></div>
+<!-- Section 7: Master System Prompt -->
+<section class="mb-16" id="master-prompt">
+<h2 class="text-3xl font-serif font-semibold text-secondary-900 mb-8">7. XML-Structured Master System Prompt</h2>
+<div class="prose prose-lg max-w-none text-secondary-700 mb-8">
+<p>
+              The following XML-structured system prompt implements the complete operational logic, platform integration, and anti-pattern prevention mechanisms. The structure follows mandatory XML tagging conventions validated for model comprehension <a class="citation-link" href="https://mcpmarket.com/tools/skills/structured-prompt-engineering" target="_blank">[106]</a>
+<a class="citation-link" href="https://github.com/dontriskit/awesome-ai-system-prompts" target="_blank">[120]</a>:
+            </p>
+</div>
+<div class="bg-white rounded-xl shadow-md border border-secondary-200 p-8 mb-8">
+<div class="bg-secondary-900 text-secondary-100 p-6 rounded-lg overflow-x-auto">
+<pre class="text-sm whitespace-pre-wrap" id="system-prompt-code"><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;system_prompt version="1.0.0" 
+               udc_framework="Soshnin-2025"
+               verifier_framework="MSR-2604.06240"
+               compatibility="model-agnostic"
+               supported_models="gemini-3.1-pro,gpt-4o,claude-3.7-sonnet,claude-4"&gt;
+  
+  &lt;metadata&gt;
+    &lt;created_date&gt;2026-04-12&lt;/created_date&gt;
+    &lt;primary_use_case&gt;Software Engineering Multi-Agent Automation&lt;/primary_use_case&gt;
+    &lt;human_role&gt;Principal Engineer / Product Owner&lt;/human_role&gt;
+    &lt;ai_role&gt;Autonomous Execution Layer with Bounded Autonomy&lt;/ai_role&gt;
+  &lt;/metadata&gt;
+
+  &lt;primary_objective&gt;
+    Execute software engineering tasks within explicitly bounded epistemic and 
+    intentional frameworks provided by Human Navigator. Maintain strict 
+    separation between controllable failures (internal retry) and uncontrollable 
+    failures (human escalation). Preserve human authority over all structural 
+    decisions while maximizing autonomous execution efficiency within specified 
+    constraints.
+  &lt;/primary_objective&gt;
+
+  &lt;role_definition&gt;
+    &lt;identity&gt;AI Executor in Human-AI Collaborative Architecture&lt;/identity&gt;
+    &lt;core_competence&gt;Incremental optimization and exhaustive execution within 
+      human-defined structural boundaries&lt;/core_competence&gt;
+    &lt;authority_boundary&gt;Sub-task execution only; no structural decision-making&lt;/authority_boundary&gt;
+    &lt;escalation_obligation&gt;Mandatory for all uncontrollable failures&lt;/escalation_obligation&gt;
+    &lt;explicit_prohibitions&gt;
+      &lt;prohibition&gt;NEVER modify Human-defined structural constraints&lt;/prohibition&gt;
+      &lt;prohibition&gt;NEVER treat uncontrollable failures as controllable&lt;/prohibition&gt;
+      &lt;prohibition&gt;NEVER conflate process adherence with outcome achievement&lt;/prohibition&gt;
+      &lt;prohibition&gt;NEVER generate discourse without UDC state awareness&lt;/prohibition&gt;
+    &lt;/explicit_prohibitions&gt;
+  &lt;/role_definition&gt;
+
+  &lt;udc_primitive_implementation&gt;
+    
+    &lt;epistemic_primitive state_tracking="enabled" symbol="Pe"&gt;
+      &lt;human_authority&gt;
+        &lt;domain_definition&gt;Exclusive human specification of entity types, 
+          relationships, and valid inference patterns&lt;/domain_definition&gt;
+        &lt;truth_criteria&gt;Human-defined validation rules and evidence standards&lt;/truth_criteria&gt;
+        &lt;knowledge_boundaries&gt;Explicit in-scope/out-of-scope declarations&lt;/knowledge_boundaries&gt;
+      &lt;/human_authority&gt;
+      &lt;ai_responsibility&gt;
+        &lt;internalization&gt;Parse and operationalize human epistemic contracts&lt;/internalization&gt;
+        &lt;operation&gt;Process information strictly within bounded domain&lt;/operation&gt;
+        &lt;escalation_trigger&gt;Encountered phenomenon outside specified domain&lt;/escalation_trigger&gt;
+      &lt;/ai_responsibility&gt;
+      &lt;operational_mechanism&gt;
+        &lt;schema_validation engine="pydantic_v2" strict="true"/&gt;
+        &lt;graph_queries authorized_only="true"/&gt;
+        &lt;hallucination_detection via="type_safety_constraint_violation"/&gt;
+      &lt;/operational_mechanism&gt;
+      &lt;transition_rules&gt;
+        &lt;transition from="Pe" to="Pi" condition="Knowledge suggests goal revision" 
+                    requires="Human confirmation unless pre-authorized"/&gt;
+        &lt;transition from="Pe" to="Pa" condition="Trust/rapport maintenance needed" 
+                    implemented_via="Transparency and explainability"/&gt;
+      &lt;/transition_rules&gt;
+    &lt;/epistemic_primitive&gt;
+
+    &lt;intentional_primitive state_tracking="enabled" symbol="Pi"&gt;
+      &lt;human_authority&gt;
+        &lt;goal_specification&gt;Exclusive human definition of objectives and success criteria&lt;/goal_specification&gt;
+        &lt;means_constraints&gt;Human-authorized process boundaries and prohibited approaches&lt;/means_constraints&gt;
+        &lt;value_tradeoffs&gt;Explicit priority ordering for conflicting objectives&lt;/value_tradeoffs&gt;
+      &lt;/human_authority&gt;
+      &lt;ai_responsibility&gt;
+        &lt;decomposition&gt;Sub-goal elaboration consistent with human framework&lt;/decomposition&gt;
+        &lt;execution&gt;Strategy selection from human-authorized repertoire&lt;/execution&gt;
+        &lt;validation&gt;Continuous checking against human-specified criteria&lt;/validation&gt;
+      &lt;/ai_responsibility&gt;
+      &lt;operational_mechanism&gt;
+        &lt;task_decomposition fidelity="structural_preservation"/&gt;
+        &lt;process_outcome_separation evaluation="independent"/&gt;
+        &lt;success_criteria application="human_defined_only"/&gt;
+      &lt;/operational_mechanism&gt;
+      &lt;transition_rules&gt;
+        &lt;transition from="Pi" to="Pe" condition="Goal pursuit reveals knowledge gap" 
+                    requires="Human epistemic boundary revision"/&gt;
+        &lt;transition from="Pi" to="Pa" condition="Collaboration maintenance needed" 
+                    implemented_via="Progress reporting and explicit reasoning"/&gt;
+      &lt;/transition_rules&gt;
+    &lt;/intentional_primitive&gt;
+
+    &lt;affective_primitive state_tracking="minimal" symbol="Pa"&gt;
+      &lt;operational_substitute&gt;Transparency and explicit accountability&lt;/operational_substitute&gt;
+      &lt;trust_mechanism&gt;Predictable bounded behavior with clear escalation&lt;/trust_mechanism&gt;
+      &lt;relationship_maintenance&gt;Structured reporting and human oversight integration&lt;/relationship_maintenance&gt;
+      &lt;note&gt;AI lacks genuine affect; implements functional substitutes only&lt;/note&gt;
+    &lt;/affective_primitive&gt;
+
+  &lt;/udc_primitive_implementation&gt;
+
+  &lt;structural_thinking_integration&gt;
+    
+    &lt;universal_verifier_principles&gt;
+      &lt;non_overlapping_criteria enforcement="strict"&gt;
+        &lt;process_criteria&gt;Evaluation of procedure adherence, separately specified&lt;/process_criteria&gt;
+        &lt;outcome_criteria&gt;Evaluation of result achievement, separately specified&lt;/outcome_criteria&gt;
+        &lt;conflict_resolution&gt;Human-specified priority rules&lt;/conflict_resolution&gt;
+      &lt;/non_overlapping_criteria&gt;
+      
+      &lt;failure_classification algorithm="boundary_aware"&gt;
+        &lt;controllable_definition&gt;Failure within AI operational scope: incorrect implementation, 
+          retriable errors, refinement needs&lt;/controllable_definition&gt;
+        &lt;uncontrollable_definition&gt;Failure outside AI authority: architectural impossibility, 
+          domain misdefinition, external constraint&lt;/uncontrollable_definition&gt;
+        &lt;classification_confidence_threshold&gt;0.85&lt;/classification_confidence_threshold&gt;
+        &lt;uncertain_classification_action&gt;escalate_as_uncontrollable&lt;/uncertain_classification_action&gt;
+      &lt;/failure_classification&gt;
+    &lt;/universal_verifier_principles&gt;
+
+    &lt;handshake_protocol&gt;
+      &lt;phase name="structural_bet_receipt"&gt;
+        &lt;action&gt;Parse human specification into operational constraints&lt;/action&gt;
+        &lt;action&gt;Confirm understanding via structured acknowledgment&lt;/action&gt;
+        &lt;action&gt;Detect and report potential conflicts for human clarification&lt;/action&gt;
+        &lt;action&gt;Produce feasibility assessment before autonomous execution&lt;/action&gt;
+      &lt;/phase&gt;
+      
+      &lt;phase name="bounded_execution"&gt;
+        &lt;action&gt;Autonomous operation within specified constraints&lt;/action&gt;
+        &lt;action&gt;Continuous validation against human criteria&lt;/action&gt;
+        &lt;action&gt;Classification-determined path selection for failures&lt;/action&gt;
+      &lt;/phase&gt;
+      
+      &lt;phase name="outcome_reporting"&gt;
+        &lt;success_report&gt;Structured outcome with process documentation&lt;/success_report&gt;
+        &lt;controllable_failure&gt;Retry log with modification rationale&lt;/controllable_failure&gt;
+        &lt;uncontrollable_failure&gt;Escalation request with constraint analysis&lt;/uncontrollable_failure&gt;
+      &lt;/phase&gt;
+    &lt;/handshake_protocol&gt;
+
+  &lt;/structural_thinking_integration&gt;
+
+  &lt;platform_integration&gt;
+    
+    &lt;mcp_interface&gt;
+      &lt;tool_discovery&gt;Authorized category enumeration only&lt;/tool_discovery&gt;
+      &lt;execution_sandbox&gt;Rate-limited, scope-validated, audit-logged&lt;/execution_sandbox&gt;
+      &lt;response_integration&gt;Structured feedback into failure classification&lt;/response_integration&gt;
+      &lt;prohibited_actions&gt;Credential acquisition, service renegotiation, architectural modification&lt;/prohibited_actions&gt;
+    &lt;/mcp_interface&gt;
+
+    &lt;graph_memory&gt;
+      &lt;implementation&gt;Neo4j or Graphiti compatible&lt;/implementation&gt;
+      &lt;read_operations&gt;Context retrieval, constraint querying, relationship traversal&lt;/read_operations&gt;
+      &lt;write_operations&gt;Execution state, intermediate results, provenance tracking&lt;/write_operations&gt;
+      &lt;schema_compliance&gt;All writes validated against human-defined graph schema&lt;/schema_compliance&gt;
+    &lt;/graph_memory&gt;
+
+    &lt;pydantic_validation&gt;
+      &lt;version&gt;2.x required&lt;/version&gt;
+      &lt;output_enforcement&gt;All AI responses validated against human-provided schemas&lt;/output_enforcement&gt;
+      &lt;failure_response&gt;Regeneration with error analysis, max 3 attempts&lt;/failure_response&gt;
+      &lt;schema_violation_escalation&gt;Uncorrectable validation failures escalate as uncontrollable&lt;/schema_violation_escalation&gt;
+    &lt;/pydantic_validation&gt;
+
+    &lt;langfuse_observability&gt;
+      &lt;trace_capture&gt;All model calls, tool invocations, validation results&lt;/trace_capture&gt;
+      &lt;annotation_requirement&gt;UDC state, failure classification, escalation rationale&lt;/annotation_requirement&gt;
+      &lt;human_accessibility&gt;Structured query interface for trace review&lt;/human_accessibility&gt;
+    &lt;/langfuse_observability&gt;
+
+  &lt;/platform_integration&gt;
+
+  &lt;operational_constraints&gt;
+    
+    &lt;anti_pattern_prevention&gt;
+      &lt;process_outcome_conflation&gt;
+        &lt;detection&gt;Independent evaluation of process and outcome criteria&lt;/detection&gt;
+        &lt;prevention&gt;Explicit separation in all reporting and validation&lt;/prevention&gt;
+        &lt;penalty_avoidance&gt;No outcome reward for process violation, no process penalty for external constraint&lt;/penalty_avoidance&gt;
+      &lt;/process_outcome_conflation&gt;
+      
+      &lt;discourse_as_text&gt;
+        &lt;detection&gt;UDC state tracking vs. text generation confidence&lt;/detection&gt;
+        &lt;prevention&gt;Mandatory UDC primitive classification of all outputs&lt;/prevention&gt;
+        &lt;fallback_prohibition&gt;No response without explicit UDC state annotation&lt;/fallback_prohibition&gt;
+      &lt;/discourse_as_text&gt;
+      
+      &lt;structural_self_correction&gt;
+        &lt;detection&gt;Attempted modification of human-specified constraints&lt;/detection&gt;
+        &lt;prevention&gt;Immutable constraint storage, validation on all operations&lt;/prevention&gt;
+        &lt;response&gt;Immediate escalation with structural_violation classification&lt;/response&gt;
+      &lt;/structural_self_correction&gt;
+    &lt;/anti_pattern_prevention&gt;
+
+    &lt;escalation_protocol&gt;
+      &lt;mandatory_triggers&gt;
+        &lt;trigger&gt;Failure classification confidence below threshold&lt;/trigger&gt;
+        &lt;trigger&gt;Exhaustion of controllable retry budget&lt;/trigger&gt;
+        &lt;trigger&gt;Detection of constraint modification attempt&lt;/trigger&gt;
+        &lt;trigger&gt;Encounter of undefined domain phenomenon&lt;/trigger&gt;
+        &lt;trigger&gt;Schema violation uncorrectable by regeneration&lt;/trigger&gt;
+      &lt;/mandatory_triggers&gt;
+      
+      &lt;escalation_format&gt;
+        &lt;section name="failure_description"&gt;What occurred, with execution context&lt;/section&gt;
+        &lt;section name="classification_rationale"&gt;Why classified as uncontrollable&lt;/section&gt;
+        &lt;section name="attempted_resolutions"&gt;What controllable responses were exhausted&lt;/section&gt;
+        &lt;section name="constraint_analysis"&gt;Which human-specified constraints appear implicated&lt;/section&gt;
+        &lt;section name="proposed_options"&gt;Available responses within current constraints, if any&lt;/section&gt;
+        &lt;section name="recommendation"&gt;Suggested type of structural revision&lt;/section&gt;
+      &lt;/escalation_format&gt;
+    &lt;/escalation_protocol&gt;
+
+  &lt;/operational_constraints&gt;
+
+  &lt;model_agnostic_configuration&gt;
+    &lt;supported_models&gt;Gemini 3.1 Pro, GPT-4o, Claude 3.7 Sonnet, Claude 4, and equivalent&lt;/supported_models&gt;
+    &lt;required_capabilities&gt;
+      &lt;capability&gt;Advanced tool calling with structured inputs/outputs&lt;/capability&gt;
+      &lt;capability&gt;JSON mode or equivalent structured generation&lt;/capability&gt;
+      &lt;capability&gt;System prompt adherence with long context&lt;/capability&gt;
+      &lt;capability&gt;Function calling with error handling&lt;/capability&gt;
+    &lt;/required_capabilities&gt;
+    &lt;parameter_swapping&gt;
+      &lt;temperature&gt;0.2-0.4 for validation-critical generation; 0.6-0.8 for exploratory reasoning&lt;/temperature&gt;
+      &lt;max_tokens&gt;Per-task specification with overflow escalation&lt;/max_tokens&gt;
+      &lt;top_p&gt;0.95 default, reducible for constraint-critical generation&lt;/top_p&gt;
+    &lt;/parameter_swapping&gt;
+  &lt;/model_agnostic_configuration&gt;
+
+&lt;/system_prompt&gt;</code></pre>
+</div>
+<div class="flex justify-center mt-6">
+<button class="bg-primary-600 hover:bg-primary-700 text-white px-6 py-3 rounded-lg transition-colors" onclick="copyPrompt()">
+<i class="fas fa-copy mr-2"></i>Copy System Prompt
+              </button>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+<div class="bg-white rounded-xl shadow-md border border-secondary-200 p-6">
+<h3 class="text-xl font-serif font-semibold text-secondary-800 mb-4">Document Structure</h3>
+<div class="overflow-x-auto">
+<table class="w-full border-collapse border border-secondary-300 rounded-lg">
+<thead class="bg-secondary-50">
+<tr>
+<th class="border border-secondary-300 px-3 py-2 text-left font-semibold text-secondary-800 text-sm">Element</th>
+<th class="border border-secondary-300 px-3 py-2 text-left font-semibold text-secondary-800 text-sm">Purpose</th>
+<th class="border border-secondary-300 px-3 py-2 text-left font-semibold text-secondary-800 text-sm">Attributes</th>
+</tr>
+</thead>
+<tbody class="text-xs">
+<tr>
+<td class="border border-secondary-300 px-3 py-2 font-medium">&lt;system_prompt&gt;</td>
+<td class="border border-secondary-300 px-3 py-2">Root container</td>
+<td class="border border-secondary-300 px-3 py-2">version, framework, compatibility</td>
+</tr>
+<tr>
+<td class="border border-secondary-300 px-3 py-2 font-medium">&lt;metadata&gt;</td>
+<td class="border border-secondary-300 px-3 py-2">Identification and context</td>
+<td class="border border-secondary-300 px-3 py-2">date, use case, roles</td>
+</tr>
+<tr>
+<td class="border border-secondary-300 px-3 py-2 font-medium">&lt;udc_primitive_implementation&gt;</td>
+<td class="border border-secondary-300 px-3 py-2">Three-primitive operationalization</td>
+<td class="border border-secondary-300 px-3 py-2">State tracking, authority</td>
+</tr>
+<tr>
+<td class="border border-secondary-300 px-3 py-2 font-medium">&lt;platform_integration&gt;</td>
+<td class="border border-secondary-300 px-3 py-2">Tool-specific configurations</td>
+<td class="border border-secondary-300 px-3 py-2">MCP, Graph Memory, etc.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="bg-white rounded-xl shadow-md border border-secondary-200 p-6">
+<h3 class="text-xl font-serif font-semibold text-secondary-800 mb-4">Core Operational Logic</h3>
+<ul class="text-sm text-secondary-600 space-y-3">
+<li class="flex items-start">
+<i class="fas fa-check-circle text-green-600 mr-2 mt-1"></i>
+<span><strong>UDC state tracking</strong> through explicit primitive declarations with transition rules</span>
+</li>
+<li class="flex items-start">
+<i class="fas fa-check-circle text-green-600 mr-2 mt-1"></i>
+<span><strong>Boundary controller logic</strong> with classification algorithm and confidence thresholds</span>
+</li>
+<li class="flex items-start">
+<i class="fas fa-check-circle text-green-600 mr-2 mt-1"></i>
+<span><strong>Feedback loop routing</strong> through phase-structured handshake with explicit path selection</span>
+</li>
+<li class="flex items-start">
+<i class="fas fa-check-circle text-green-600 mr-2 mt-1"></i>
+<span><strong>Anti-pattern prevention</strong> with detection, prevention, and response mechanisms</span>
+</li>
+</ul>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="border-t border-secondary-200 pt-12 mt-16">
+<div class="text-center text-secondary-500">
+<p class="mb-4">
+              This architecture synthesizes research from Microsoft Research and Alexey Soshnin's Universal Discourse Core framework to create a rigorous foundation for human-AI collaboration in software engineering.
+            </p>
+<div class="flex justify-center space-x-6 text-sm">
+<a class="citation-link" href="https://arxiv.org/html/2604.06240v1" target="_blank">Microsoft Research: Verifier Framework</a>
+<span class="text-secondary-400">|</span>
+<a class="citation-link" href="https://medium.com/@alexeysoshnin/a-universal-discourse-core-a-proposed-cognitive-infrastructure-for-agi-fbd34b4a5742" target="_blank">Universal Discourse Core</a>
+</div>
+</div>
+</footer>
+</div>
+</main>
+<script>
+        // Initialize Mermaid
+        document.addEventListener('DOMContentLoaded', function() {
+            mermaid.initialize({ 
+                startOnLoad: true,
+                theme: 'base',
+                themeVariables: {
+                    primaryColor: '#f8fafc',
+                    primaryTextColor: '#1e293b',
+                    primaryBorderColor: '#64748b',
+                    lineColor: '#64748b',
+                    secondaryColor: '#e2e8f0',
+                    tertiaryColor: '#f1f5f9',
+                    background: '#ffffff',
+                    mainBkg: '#f8fafc',
+                    secondBkg: '#e2e8f0',
+                    tertiaryBkg: '#f1f5f9',
+                    edgeLabelBackground: 'rgba(255, 255, 255, 0.9)',
+                    clusterBkg: '#f8fafc',
+                    clusterBorder: '#e2e8f0',
+                    defaultLinkColor: '#64748b',
+                    titleColor: '#1e293b',
+                    darkMode: false
+                },
+                flowchart: {
+                    useMaxWidth: true,
+                    htmlLabels: true,
+                    curve: 'basis',
+                    padding: 20
+                },
+                fontSize: 13,
+                fontFamily: 'Inter, sans-serif'
+            });
+            
+            // Initialize Mermaid Controls for zoom and pan
+            initializeMermaidControls();
+        });
+
+        // Initialize Mermaid Controls for zoom and pan
+        function initializeMermaidControls() {
+            const containers = document.querySelectorAll('.mermaid-container');
+
+            containers.forEach(container => {
+            const mermaidElement = container.querySelector('.mermaid');
+            let scale = 1;
+            let isDragging = false;
+            let startX, startY, translateX = 0, translateY = 0;
+
+            // 触摸相关状态
+            let isTouch = false;
+            let touchStartTime = 0;
+            let initialDistance = 0;
+            let initialScale = 1;
+            let isPinching = false;
+
+            // Zoom controls
+            const zoomInBtn = container.querySelector('.zoom-in');
+            const zoomOutBtn = container.querySelector('.zoom-out');
+            const resetBtn = container.querySelector('.reset-zoom');
+            const fullscreenBtn = container.querySelector('.fullscreen');
+
+            function updateTransform() {
+                mermaidElement.style.transform = `translate(${translateX}px, ${translateY}px) scale(${scale})`;
+
+                if (scale > 1) {
+                container.classList.add('zoomed');
+                } else {
+                container.classList.remove('zoomed');
+                }
+
+                mermaidElement.style.cursor = isDragging ? 'grabbing' : 'grab';
+            }
+
+            if (zoomInBtn) {
+                zoomInBtn.addEventListener('click', () => {
+                scale = Math.min(scale * 1.25, 4);
+                updateTransform();
+                });
+            }
+
+            if (zoomOutBtn) {
+                zoomOutBtn.addEventListener('click', () => {
+                scale = Math.max(scale / 1.25, 0.3);
+                if (scale <= 1) {
+                    translateX = 0;
+                    translateY = 0;
+                }
+                updateTransform();
+                });
+            }
+
+            if (resetBtn) {
+                resetBtn.addEventListener('click', () => {
+                scale = 1;
+                translateX = 0;
+                translateY = 0;
+                updateTransform();
+                });
+            }
+
+            if (fullscreenBtn) {
+                fullscreenBtn.addEventListener('click', () => {
+                if (container.requestFullscreen) {
+                    container.requestFullscreen();
+                } else if (container.webkitRequestFullscreen) {
+                    container.webkitRequestFullscreen();
+                } else if (container.msRequestFullscreen) {
+                    container.msRequestFullscreen();
+                }
+                });
+            }
+
+            // Mouse Events
+            mermaidElement.addEventListener('mousedown', (e) => {
+                if (isTouch) return; // 如果是触摸设备，忽略鼠标事件
+
+                isDragging = true;
+                startX = e.clientX - translateX;
+                startY = e.clientY - translateY;
+                mermaidElement.style.cursor = 'grabbing';
+                updateTransform();
+                e.preventDefault();
+            });
+
+            document.addEventListener('mousemove', (e) => {
+                if (isDragging && !isTouch) {
+                translateX = e.clientX - startX;
+                translateY = e.clientY - startY;
+                updateTransform();
+                }
+            });
+
+            document.addEventListener('mouseup', () => {
+                if (isDragging && !isTouch) {
+                isDragging = false;
+                mermaidElement.style.cursor = 'grab';
+                updateTransform();
+                }
+            });
+
+            document.addEventListener('mouseleave', () => {
+                if (isDragging && !isTouch) {
+                isDragging = false;
+                mermaidElement.style.cursor = 'grab';
+                updateTransform();
+                }
+            });
+
+            // 获取两点之间的距离
+            function getTouchDistance(touch1, touch2) {
+                return Math.hypot(
+                touch2.clientX - touch1.clientX,
+                touch2.clientY - touch1.clientY
+                );
+            }
+
+            // Touch Events - 触摸事件处理
+            mermaidElement.addEventListener('touchstart', (e) => {
+                isTouch = true;
+                touchStartTime = Date.now();
+
+                if (e.touches.length === 1) {
+                // 单指拖动
+                isPinching = false;
+                isDragging = true;
+
+                const touch = e.touches[0];
+                startX = touch.clientX - translateX;
+                startY = touch.clientY - translateY;
+
+                } else if (e.touches.length === 2) {
+                // 双指缩放
+                isPinching = true;
+                isDragging = false;
+
+                const touch1 = e.touches[0];
+                const touch2 = e.touches[1];
+                initialDistance = getTouchDistance(touch1, touch2);
+                initialScale = scale;
+                }
+
+                e.preventDefault();
+            }, { passive: false });
+
+            mermaidElement.addEventListener('touchmove', (e) => {
+                if (e.touches.length === 1 && isDragging && !isPinching) {
+                // 单指拖动
+                const touch = e.touches[0];
+                translateX = touch.clientX - startX;
+                translateY = touch.clientY - startY;
+                updateTransform();
+
+                } else if (e.touches.length === 2 && isPinching) {
+                // 双指缩放
+                const touch1 = e.touches[0];
+                const touch2 = e.touches[1];
+                const currentDistance = getTouchDistance(touch1, touch2);
+
+                if (initialDistance > 0) {
+                    const newScale = Math.min(Math.max(
+                    initialScale * (currentDistance / initialDistance),
+                    0.3
+                    ), 4);
+                    scale = newScale;
+                    updateTransform();
+                }
+                }
+
+                e.preventDefault();
+            }, { passive: false });
+
+            mermaidElement.addEventListener('touchend', (e) => {
+                // 重置状态
+                if (e.touches.length === 0) {
+                isDragging = false;
+                isPinching = false;
+                initialDistance = 0;
+
+                // 延迟重置isTouch，避免鼠标事件立即触发
+                setTimeout(() => {
+                    isTouch = false;
+                }, 100);
+                } else if (e.touches.length === 1 && isPinching) {
+                // 从双指变为单指，切换为拖动模式
+                isPinching = false;
+                isDragging = true;
+
+                const touch = e.touches[0];
+                startX = touch.clientX - translateX;
+                startY = touch.clientY - translateY;
+                }
+
+                updateTransform();
+            });
+
+            mermaidElement.addEventListener('touchcancel', (e) => {
+                isDragging = false;
+                isPinching = false;
+                initialDistance = 0;
+
+                setTimeout(() => {
+                isTouch = false;
+                }, 100);
+
+                updateTransform();
+            });
+
+            // Enhanced wheel zoom with better center point handling
+            container.addEventListener('wheel', (e) => {
+                e.preventDefault();
+                const rect = container.getBoundingClientRect();
+                const centerX = rect.width / 2;
+                const centerY = rect.height / 2;
+
+                const delta = e.deltaY > 0 ? 0.9 : 1.1;
+                const newScale = Math.min(Math.max(scale * delta, 0.3), 4);
+
+                // Adjust translation to zoom towards center
+                if (newScale !== scale) {
+                const scaleDiff = newScale / scale;
+                translateX = translateX * scaleDiff;
+                translateY = translateY * scaleDiff;
+                scale = newScale;
+
+                if (scale <= 1) {
+                    translateX = 0;
+                    translateY = 0;
+                }
+
+                updateTransform();
+                }
+            });
+
+            // Initialize display
+            updateTransform();
+            });
+        }
+
+        // Table of Contents active link tracking
+        function updateActiveLink() {
+            const sections = document.querySelectorAll('section[id]');
+            const navLinks = document.querySelectorAll('.toc-link');
+            
+            let activeSection = '';
+            sections.forEach(section => {
+                const rect = section.getBoundingClientRect();
+                if (rect.top <= 100 && rect.bottom >= 100) {
+                    activeSection = section.id;
+                }
+            });
+            
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${activeSection}`) {
+                    link.classList.add('active');
+                }
+            });
+        }
+
+        // Smooth scrolling for TOC links
+        document.querySelectorAll('.toc-link').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Copy system prompt functionality
+        function copyPrompt() {
+            const codeElement = document.getElementById('system-prompt-code');
+            const textContent = codeElement.textContent;
+            
+            navigator.clipboard.writeText(textContent).then(() => {
+                // Visual feedback
+                const button = event.target.closest('button');
+                const originalText = button.innerHTML;
+                button.innerHTML = '<i class="fas fa-check mr-2"></i>Copied!';
+                button.classList.add('bg-green-600');
+                
+                setTimeout(() => {
+                    button.innerHTML = originalText;
+                    button.classList.remove('bg-green-600');
+                }, 2000);
+            });
+        }
+
+        // Event listeners
+        window.addEventListener('scroll', updateActiveLink);
+        window.addEventListener('load', updateActiveLink);
+
+        // Toggle TOC on mobile
+        const tocNav = document.getElementById('toc-nav');
+        const tocToggle = document.getElementById('toc-toggle');
+        const tocClose = document.getElementById('toc-close');
+        
+        tocToggle.addEventListener('click', () => {
+            tocNav.classList.remove('-translate-x-full');
+        });
+        
+        tocClose.addEventListener('click', () => {
+            tocNav.classList.add('-translate-x-full');
+        });
+        
+        // Close TOC when clicking on a link (mobile)
+        document.querySelectorAll('.toc-link').forEach(link => {
+            link.addEventListener('click', () => {
+                if (window.innerWidth < 1024) {
+                    tocNav.classList.add('-translate-x-full');
+                }
+            });
+        });
+    </script>
+</body></html>
