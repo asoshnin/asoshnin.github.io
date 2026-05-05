@@ -1,30 +1,45 @@
-# 1. Load .env with Process-only scope (Security Fix)
-Get-Content .env | ForEach-Object {
-    if ($_ -match '^\s*([^#][^=]+)=(.+)$') {
-        $key = $matches[1].Trim()
-        $val = $matches[2].Trim()
-        [System.Environment]::SetEnvironmentVariable($key, $val, [System.EnvironmentVariableTarget]::Process)
-    }
+param([string]$ProjectName)
+
+# 1. Prompt for project name if not provided
+if (-not $ProjectName) {
+    $ProjectName = Read-Host "Enter the project folder name (e.g., ThirdNext)"
 }
 
-$PASS = [System.Environment]::GetEnvironmentVariable("THIRDNEXT_PASSWORD", "Process")
+$SourcePath = "_source\$ProjectName"
+$OutputPath = "PROJECTS\$ProjectName"
 
-if (-not $PASS) {
-    Write-Error "CRITICAL: THIRDNEXT_PASSWORD not found in .env file."
+if (-not (Test-Path $SourcePath)) {
+    Write-Error "Source folder $SourcePath not found!"
     exit
 }
 
-# 2. Sync assets (Safe sync: /E copies subdirs but does NOT delete files in destination)
-Write-Host "--- Syncing Assets ---"
-robocopy "_source\ThirdNext" "PROJECTS\ThirdNext" /E /XF *.html
+# 2. Load .env and find the specific password for this project
+$EnvVarName = "PASS_$ProjectName"
+Get-Content .env | ForEach-Object {
+    if ($_ -match "^\s*$EnvVarName=(.+)$") {
+        [System.Environment]::SetEnvironmentVariable($EnvVarName, $matches[1].Trim(), "Process")
+    }
+}
 
-# 3. Encrypt
-Write-Host "--- Running Encryption ---"
-# Note: We use -p directly with the variable. 
-# --remember 0 ensures the browser doesn't save the password forever.
-staticrypt "_source\ThirdNext\index.html" `
+$PASS = [System.Environment]::GetEnvironmentVariable($EnvVarName, "Process")
+
+if (-not $PASS) {
+    Write-Error "CRITICAL: No password found in .env for variable: $EnvVarName"
+    exit
+}
+
+# 3. Create output directory if it doesn't exist
+if (-not (Test-Path $OutputPath)) { New-Item -ItemType Directory -Path $OutputPath }
+
+# 4. Sync assets (Safe sync)
+Write-Host "--- Syncing Assets for $ProjectName ---"
+robocopy "$SourcePath" "$OutputPath" /E /XF *.html
+
+# 5. Encrypt (Handles all HTML files in the folder)
+Write-Host "--- Encrypting $ProjectName ---"
+staticrypt "$SourcePath\*.html" -r `
     -p "$PASS" `
-    -d "PROJECTS\ThirdNext" `
+    -d "$OutputPath" `
     --remember 0
 
-Write-Host "DONE: Encryption complete. Files moved to PROJECTS\ThirdNext"
+Write-Host "SUCCESS: $ProjectName is ready."
