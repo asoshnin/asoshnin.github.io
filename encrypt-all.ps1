@@ -13,7 +13,7 @@ if (-not (Test-Path $SourcePath)) {
     exit
 }
 
-# 2. Load .env and find the specific password for this project
+# 2. Load .env and find the specific password
 $EnvVarName = "PASS_$ProjectName"
 Get-Content .env | ForEach-Object {
     if ($_ -match "^\s*$EnvVarName=(.+)$") {
@@ -31,15 +31,12 @@ if (-not $PASS) {
 # 3. Create output directory if it doesn't exist
 if (-not (Test-Path $OutputPath)) { New-Item -ItemType Directory -Path $OutputPath }
 
-# 4. Sync assets (Safe sync)
+# 4. Sync non-HTML assets
 Write-Host "--- Syncing Assets for $ProjectName ---"
 robocopy "$SourcePath" "$OutputPath" /E /XF *.html
 
-# 5. Encrypt (Handles all HTML files in the folder)
+# 5. Encrypt (FIX APPLIED: Target the directory directly, single-line command)
 Write-Host "--- Encrypting $ProjectName ---"
-staticrypt "$SourcePath\*.html" -r `
-    -p "$PASS" `
-    -d "$OutputPath" `
-    --remember 0
+staticrypt "$SourcePath" -r -p "$PASS" -d "$OutputPath" --remember 0
 
 Write-Host "SUCCESS: $ProjectName is ready."
