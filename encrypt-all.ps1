@@ -30,16 +30,27 @@ if (-not $PASS) {
 }
 
 # 3. Create output directory
-if (-not (Test-Path $OutputPath)) { New-Item -ItemType Directory -Path $OutputPath }
+if (-not (Test-Path $OutputPath)) { New-Item -ItemType Directory -Path $OutputPath | Out-Null }
 
-# 4. Sync Assets
+# 4. Sync Assets (This handles the folders and images flawlessly)
 Write-Host "--- Syncing Assets for $ProjectName ---"
 robocopy "$SourcePath" "$OutputPath" /E /XF *.html
 
-# 5. Encrypt (FIX APPLIED: Jump inside the folder, target "." to prevent nesting)
-Write-Host "--- Encrypting $ProjectName ---"
-Push-Location $SourcePath
-staticrypt "." -r -p "$PASS" -d "$OutputPath" --remember 0
-Pop-Location
+# 5. Encrypt (THE FIX: File-by-file explicit targeting)
+Write-Host "--- Encrypting HTML Files for $ProjectName ---"
+# Find every HTML file, no matter how deep it is nested
+$HtmlFiles = Get-ChildItem -Path "$SourcePath" -Filter "*.html" -Recurse
+
+foreach ($file in $HtmlFiles) {
+    # Calculate exactly where this file belongs in the PROJECTS folder
+    $relativePath = $file.FullName.Substring($SourcePath.Length).Trim('\')
+    $destinationFile = Join-Path $OutputPath $relativePath
+    $destinationDir = Split-Path $destinationFile -Parent
+    
+    Write-Host "Encrypting -> $relativePath"
+    
+    # We pass the exact file and the exact destination directory. No -r flag used.
+    staticrypt $file.FullName -p "$PASS" -d "$destinationDir" --remember 0
+}
 
 Write-Host "SUCCESS: $ProjectName is ready."
