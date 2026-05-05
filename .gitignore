@@ -1,0 +1,6 @@
+﻿_source/
+.env
+venv/
+*.pyc
+__pycache__/
+.staticrypt.json
