@@ -1,31 +1,22 @@
-# Auto-activate venv if it's not already active
-if ($env:VIRTUAL_ENV -eq $null) {
-    Write-Host "--- Activating Environment ---" -ForegroundColor Yellow
-    .\venv\Scripts\Activate.ps1
-}
+@echo off
+set /p ProjectName="Which project are you deploying? (e.g. ThirdNext): "
 
-# 0. Run the Image Localizer
-Write-Host "--- Localizing Images ---" -ForegroundColor Cyan
-python localize.py
+cd /d "%~dp0"
 
-# 1. Run the Image Localizer first
-Write-Host "--- Localizing Images ---" -ForegroundColor Cyan
-python localize.py
+echo.
+echo [1/3] Localizing images...
+venv\Scripts\python.exe localize.py --source-dir "_source\%ProjectName%"
 
-# 2. Add all changes to Git
-Write-Host "--- Staging changes ---" -ForegroundColor Cyan
+echo.
+echo [2/3] Encrypting project [%ProjectName%]...
+powershell -ExecutionPolicy Bypass -File "encrypt-all.ps1" -ProjectName "%ProjectName%"
+
+echo.
+echo [3/3] Pushing to GitHub...
 git add .
-
-# 3. Ask for a commit message (or use a default)
-$msg = Read-Host "Enter a commit message (or press Enter for 'Auto-update')"
-if ($msg -eq "") { $msg = "Auto-update: $(Get-Date -Format 'yyyy-MM-dd HH:mm')" }
-
-# 4. Commit
-Write-Host "--- Committing ---" -ForegroundColor Cyan
-git commit -m "$msg"
-
-# 5. Push to GitHub
-Write-Host "--- Pushing to GitHub ---" -ForegroundColor Cyan
+git commit -m "Deploy update for %ProjectName%"
 git push origin main
 
-Write-Host "--- Done! Your site will be live in 1-2 minutes. ---" -ForegroundColor Green
+echo.
+echo 🎉 Live at [https://yourusername.github.io/PROJECTS/%ProjectName%/](https://yourusername.github.io/PROJECTS/%ProjectName%/)
+pause

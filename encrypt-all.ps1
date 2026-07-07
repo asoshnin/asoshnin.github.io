@@ -4,17 +4,16 @@ if (-not $ProjectName) {
     $ProjectName = Read-Host "Enter the project folder name (e.g., ThirdNext)"
 }
 
-# 1. Establish Absolute Paths
 $RootPath = (Get-Location).Path
 $SourcePath = Join-Path $RootPath "_source\$ProjectName"
 $OutputPath = Join-Path $RootPath "PROJECTS\$ProjectName"
 
 if (-not (Test-Path $SourcePath)) {
-    Write-Error "Source folder $SourcePath not found!"
+    Write-Error "CRITICAL: Source folder $SourcePath not found!"
     exit
 }
 
-# 2. Load Password
+# 2. Load Password securely into Process scope
 $EnvVarName = "PASS_$ProjectName"
 Get-Content (Join-Path $RootPath ".env") | ForEach-Object {
     if ($_ -match "^\s*$EnvVarName=(.+)$") {
@@ -32,25 +31,21 @@ if (-not $PASS) {
 # 3. Create output directory
 if (-not (Test-Path $OutputPath)) { New-Item -ItemType Directory -Path $OutputPath | Out-Null }
 
-# 4. Sync Assets (This handles the folders and images flawlessly)
-Write-Host "--- Syncing Assets for $ProjectName ---"
-robocopy "$SourcePath" "$OutputPath" /E /XF *.html
+# 4. Sync Assets (Additive sync)
+Write-Host "📁 Syncing Assets for $ProjectName..."
+robocopy "$SourcePath" "$OutputPath" /E /XF *.html | Out-Null
 
-# 5. Encrypt (THE FIX: File-by-file explicit targeting)
-Write-Host "--- Encrypting HTML Files for $ProjectName ---"
-# Find every HTML file, no matter how deep it is nested
+# 5. Encrypt HTML Files explicitly
+Write-Host "🔐 Encrypting HTML Files for $ProjectName..."
 $HtmlFiles = Get-ChildItem -Path "$SourcePath" -Filter "*.html" -Recurse
 
 foreach ($file in $HtmlFiles) {
-    # Calculate exactly where this file belongs in the PROJECTS folder
     $relativePath = $file.FullName.Substring($SourcePath.Length).Trim('\')
     $destinationFile = Join-Path $OutputPath $relativePath
     $destinationDir = Split-Path $destinationFile -Parent
     
-    Write-Host "Encrypting -> $relativePath"
-    
-    # We pass the exact file and the exact destination directory. No -r flag used.
+    Write-Host "   -> Encrypting $relativePath"
     staticrypt $file.FullName -p "$PASS" -d "$destinationDir" --remember 0
 }
 
-Write-Host "SUCCESS: $ProjectName is ready."
+Write-Host "✅ SUCCESS: $ProjectName is ready."

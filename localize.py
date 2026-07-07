@@ -1,5 +1,5 @@
+# localize.py
 import os
-import sys
 import requests
 import hashlib
 import argparse
@@ -15,7 +15,8 @@ def get_unique_filename(url):
     return f"{hashlib.md5(url.encode()).hexdigest()[:10]}{ext}"
 
 for root, dirs, files in os.walk(args.source_dir):
-    dirs[:] = [d for d in dirs if d not in ('venv', '.git', 'img')]
+    dirs[:] = [d for d in dirs if d not in ('venv', '.git', 'assets', 'img')]
+
     for file in files:
         if not file.endswith(".html"):
             continue
