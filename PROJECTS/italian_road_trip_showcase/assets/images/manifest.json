@@ -1,0 +1,146 @@
+[
+  {
+    "filename": "photo_01_hero.webp",
+    "source": "IMG_1874.HEIC",
+    "caption": "Hero Lake Como Panorama at Golden Hour",
+    "chapter": "hero",
+    "width": 1200,
+    "height": 1600,
+    "size_kb": 686.0
+  },
+  {
+    "filename": "photo_02_colmar_night.webp",
+    "source": "6328B39F-2D5B-4EE5-8F15-D931D545F232-original.jpg",
+    "caption": "Colmar by Night after the Backpack Boomerang",
+    "chapter": "act1",
+    "width": 900,
+    "height": 1200,
+    "size_kb": 91.7
+  },
+  {
+    "filename": "photo_03_gotthard_pass.webp",
+    "source": "IMG_1827.heic",
+    "caption": "Gotthard Pass Alpine Serpentine Ascent",
+    "chapter": "act1",
+    "width": 675,
+    "height": 1200,
+    "size_kb": 215.6
+  },
+  {
+    "filename": "photo_04_lake_arrival.webp",
+    "source": "IMG_1831.heic",
+    "caption": "First Glimpse of Lake Como Waters",
+    "chapter": "act2",
+    "width": 1200,
+    "height": 900,
+    "size_kb": 273.8
+  },
+  {
+    "filename": "photo_05_ferry_crossing.webp",
+    "source": "IMG_1844.heic",
+    "caption": "Ferry Hop: Menaggio to Varenna across Central Triangle",
+    "chapter": "act2",
+    "width": 1200,
+    "height": 900,
+    "size_kb": 336.3
+  },
+  {
+    "filename": "photo_06_varenna_gardens.webp",
+    "source": "IMG_1846.heic",
+    "caption": "Lakeside Botanical Terraces of Villa Monastero",
+    "chapter": "act2",
+    "width": 900,
+    "height": 1200,
+    "size_kb": 343.8
+  },
+  {
+    "filename": "photo_07_bellagio_shore.webp",
+    "source": "IMG_1854.heic",
+    "caption": "Bellagio Promenade & Afternoon Sun at the Lido",
+    "chapter": "act2",
+    "width": 1200,
+    "height": 900,
+    "size_kb": 344.0
+  },
+  {
+    "filename": "photo_08_villa_carlotta.webp",
+    "source": "IMG_1867.heic",
+    "caption": "Villa Carlotta Classical Sculptures and Subtropical Gardens",
+    "chapter": "act2",
+    "width": 900,
+    "height": 1200,
+    "size_kb": 386.8
+  },
+  {
+    "filename": "photo_09_tato_terrace.webp",
+    "source": "IMG_1871.HEIC",
+    "caption": "Ristorante Dal Tato: Evening Terrace over Lake Como",
+    "chapter": "act2",
+    "width": 900,
+    "height": 1200,
+    "size_kb": 272.6
+  },
+  {
+    "filename": "photo_10_val_di_mello.webp",
+    "source": "IMG_1880.HEIC",
+    "caption": "Val di Mello: Glacier Valley & Vertical Granite Walls",
+    "chapter": "act3",
+    "width": 900,
+    "height": 1200,
+    "size_kb": 407.6
+  },
+  {
+    "filename": "photo_11_scoglio_burgun.webp",
+    "source": "IMG_1883.HEIC",
+    "caption": "Scoglio di Burgun & The Icy Waters of Bidet della Contessa",
+    "chapter": "act3",
+    "width": 900,
+    "height": 1200,
+    "size_kb": 414.2
+  },
+  {
+    "filename": "photo_12_bagni_masino.webp",
+    "source": "IMG_1888.HEIC",
+    "caption": "Abandoned 19th Century Thermal Baths of Bagni di Masino",
+    "chapter": "act3",
+    "width": 900,
+    "height": 1200,
+    "size_kb": 298.7
+  },
+  {
+    "filename": "photo_13_thermal_grotto.webp",
+    "source": "IMG_1892.heic",
+    "caption": "The Hidden Warm Thermal Spring Grotto & Fontanella",
+    "chapter": "act3",
+    "width": 900,
+    "height": 1200,
+    "size_kb": 346.8
+  },
+  {
+    "filename": "photo_14_rezzonico_castle.webp",
+    "source": "IMG_1916.HEIC",
+    "caption": "Castello di Rezzonico Medieval Trail down to La Baia",
+    "chapter": "act3",
+    "width": 900,
+    "height": 1200,
+    "size_kb": 358.4
+  },
+  {
+    "filename": "photo_15_jufa_schwarzwald.webp",
+    "source": "IMG_1968.heic",
+    "caption": "JUFA Hotel Spa Infinity Pool & Black Forest Valley View",
+    "chapter": "act4",
+    "width": 857,
+    "height": 1200,
+    "size_kb": 439.1
+  },
+  {
+    "filename": "photo_16_ravenna_gorge.webp",
+    "source": "IMG_1997.HEIC",
+    "caption": "Deep Pines & Mist of the Ravenna Gorge Ravine",
+    "chapter": "act4",
+    "width": 900,
+    "height": 1200,
+    "size_kb": 333.6
+  }
+]
