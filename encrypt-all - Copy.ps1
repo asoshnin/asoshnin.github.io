@@ -33,11 +33,11 @@ if (-not (Test-Path $OutputPath)) { New-Item -ItemType Directory -Path $OutputPa
 
 # 4. Sync Assets (Additive sync)
 Write-Host "📁 Syncing Assets for $ProjectName..."
-robocopy "$SourcePath" "$OutputPath" /E /XF index.html | Out-Null
+robocopy "$SourcePath" "$OutputPath" /E /XF *.html | Out-Null
 
 # 5. Encrypt HTML Files explicitly
 Write-Host "🔐 Encrypting HTML Files for $ProjectName..."
-$HtmlFiles = Get-ChildItem -Path "$SourcePath" -Filter "index.html" -Recurse
+$HtmlFiles = Get-ChildItem -Path "$SourcePath" -Filter "*.html" -Recurse
 
 foreach ($file in $HtmlFiles) {
     $relativePath = $file.FullName.Substring($SourcePath.Length).Trim('\')
